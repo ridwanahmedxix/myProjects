@@ -17,6 +17,7 @@ nav ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 100%;
 }
 nav li {
   list-style: none;
@@ -57,4 +58,24 @@ nav a:hover {
   backdrop-filter: blur(10px);
   justify-content: flex-start;
   align-items: flex-start;
+}
+.menu {
+  display: none;
+}
+@media (max-width: 800px) {
+  .menu {
+    display: block;
+    padding: 10px;
+  }
+  .hideOnmobile {
+    display: none;
+  }
+  body {
+    background-position: center center;
+  }
+}
+@media (max-width: 450px) {
+  .sideBar {
+    width: 100%;
+  }
 }
