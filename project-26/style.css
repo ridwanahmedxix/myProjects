@@ -16,6 +16,7 @@ nav {
 nav ul {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 nav li {
   list-style: none;
@@ -44,4 +45,17 @@ nav a {
   z-index: 999;
   justify-content: flex-start;
   align-items: flex-start;
+}
+.menuHide {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .hideOnmobile {
+    display: none;
+  }
+  .menuHide {
+    display: block;
+    align-items: center;
+  }
 }
