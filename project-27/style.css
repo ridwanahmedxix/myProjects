@@ -5,11 +5,8 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  background-image: url("photo/body-bg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 100vh;
 }
+
 nav {
   background-color: black;
 }
@@ -62,6 +59,68 @@ nav a:hover {
 .menu {
   display: none;
 }
+
+/* FIRST SECTION CODE START  */
+#first-section {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("photo/body-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+.parent-first-sec {
+  text-align: center;
+  padding-top: 150px;
+  color: white;
+}
+.parent-first-sec h4 {
+  font-size: 30px;
+  letter-spacing: 2px;
+  padding-bottom: 10px;
+}
+.parent-first-sec h2 {
+  font-size: 80px;
+  padding-top: 20px;
+}
+
+/* SECOND SECTION CODE START  */
+#second-section {
+  background-color: white;
+  text-align: center;
+  padding: 50px 30px;
+}
+#second-section h2 {
+  padding-bottom: 30px;
+  font-size: 35px;
+}
+.parent-second-sec {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+.single-second {
+  background-color: #7d27f5;
+  padding: 20px 30px;
+  height: 250px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+  transition: 0.4s ease;
+}
+.single-second:hover {
+  background-color: #27bbf5;
+}
+.single-second i {
+  margin-top: 40px;
+  font-size: 30px;
+  padding: 20px 0;
+}
+.single-second p {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+/* RESPONSIVE CODE START  */
 @media (max-width: 800px) {
   .menu {
     display: block;
@@ -70,12 +129,52 @@ nav a:hover {
   .hideOnmobile {
     display: none;
   }
-  body {
-    background-position: center center;
-  }
 }
-@media (max-width: 450px) {
+
+@media (max-width: 599px) {
   .sideBar {
     width: 100%;
+  }
+
+  /* FIRST SECTION RESPONSIVE CODE START  */
+  .parent-first-sec {
+    padding-top: 380px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .parent-first-sec h4 {
+    font-size: 20px;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+  }
+  .parent-first-sec h2 {
+    font-size: 40px;
+    padding-top: 20px;
+  }
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  /* SECOND SECTION RESPONSIVE CODE START  */
+
+  #second-section {
+    background-color: white;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .parent-second-sec {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+
+  .single-second {
+    padding: 20px;
+    height: 250px;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    transition: 0.4s ease;
   }
 }
