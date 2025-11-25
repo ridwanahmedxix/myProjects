@@ -4,3 +4,57 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  background-image: url("photo/body-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+nav {
+  background-color: black;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav li {
+  list-style: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+nav li:first-child {
+  margin-right: auto;
+  border: none;
+}
+nav li:first-child:hover {
+  border: none;
+}
+nav a {
+  padding: 0px 30px;
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  margin: 0px 10px;
+  padding: 5px 10px;
+  transition: 0.5s ease;
+}
+nav a:hover {
+  border: 2px solid red;
+}
+.sideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.532);
+  backdrop-filter: blur(10px);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
