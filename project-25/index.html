@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESPONSIVE NAV PRACTICE</title>
+    <!-- CSS LINK  -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul class="sideBar">
+        <li class="ridwan"><a href="#">Ridwan</a></li>
+        <li><a href="#" class="hideOnMobile">Home</a></li>
+        <li><a href="#" class="hideOnMobile">Product</a></li>
+        <li><a href="#" class="hideOnMobile">Services</a></li>
+        <li><a href="#" class="hideOnMobile">Blog</a></li>
+        <li><a href="#" class="hideOnMobile">Contact</a></li>
+        <li onclick="hideSidebar()">
+          <a href="#"
+            ><img
+              style="width: 26px; height: 26px; background-color: black"
+              src="photo/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
+              alt=""
+          /></a>
+        </li>
+      </ul>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li onclick="showSideBar()">
+          <a href="#"
+            ><img
+              class="menu"
+              style="width: 26px; height: 26px; background-color: black"
+              src="photo/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
+              alt=""
+          /></a>
+        </li>
+      </ul>
+    </nav>
+    <script src="nav.js"></script>
+  </body>
+</html>
