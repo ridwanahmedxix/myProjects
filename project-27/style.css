@@ -135,8 +135,11 @@ nav a:hover {
   }
 
   /* FIRST SECTION RESPONSIVE CODE START  */
+  #first-section {
+    background-position: center center;
+  }
   .parent-first-sec {
-    padding-top: 380px;
+    padding-top: 430px;
     padding-left: 10px;
     padding-right: 10px;
   }
