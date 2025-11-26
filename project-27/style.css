@@ -217,6 +217,9 @@ nav a:hover {
 .us {
   color: rgb(241, 29, 72);
 }
+
+/* FOOTER SECTION CODE START  */
+
 /* RESPONSIVE CODE START  */
 @media (max-width: 800px) {
   .menu {
@@ -299,4 +302,5 @@ nav a:hover {
   .single-contact-two textarea {
     width: 300px;
   }
+  /* FOOTER SECTION RESPONSIVE CODE START  */
 }
