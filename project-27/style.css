@@ -118,6 +118,105 @@ nav a:hover {
   padding-bottom: 20px;
 }
 
+/* THIRD SECTION CODE START  */
+#third-section {
+  margin: 100px 0;
+}
+.skills {
+  color: crimson;
+  font-size: 35px;
+}
+.parent-third-sec {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.single-third-div img {
+  max-width: 800px;
+  width: 95%;
+}
+.single-third-div h3 {
+  font-size: 30px;
+  padding: 20px 0;
+  line-height: 45px;
+}
+.single-third-div p {
+  padding-bottom: 20px;
+  font-weight: 200;
+}
+.single-third-div ul li {
+  list-style-position: inside;
+  padding: 7px 0;
+  cursor: pointer;
+}
+
+/* FOURTH SECTION  CODE START  */
+#fourth-section {
+  background-color: rgb(24, 43, 64);
+  color: white;
+  padding-top: 100px;
+  padding-bottom: 70px;
+}
+.parent-contact {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.single-contact-two input {
+  display: block;
+  margin: 15px 0;
+  font-size: 20px;
+  padding: 15px 10px;
+  width: 400px;
+  border-radius: 15px;
+  border: none;
+}
+.single-contact-two textarea {
+  width: 400px;
+  font-size: 20px;
+  padding: 15px 10px;
+  border-radius: 15px;
+  border: none;
+}
+.single-contact h3 {
+  font-size: 40px;
+  padding: 20px 0;
+}
+.single-contact h5 {
+  padding-bottom: 20px;
+  letter-spacing: 1px;
+}
+.single-contact p {
+  max-width: 500px;
+  width: 90%;
+  line-height: 30px;
+  font-size: 19px;
+  padding-bottom: 20px;
+}
+.single-contact h6 {
+  padding: 20px 0;
+  font-size: 20px;
+}
+.submit {
+  display: block;
+  padding: 15px 25px;
+  margin: 15px 0;
+  font-size: 23px;
+  cursor: pointer;
+  background-color: crimson;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+.submit:hover {
+  background-color: rgb(164, 16, 45);
+}
+.us {
+  color: rgb(241, 29, 72);
+}
 /* RESPONSIVE CODE START  */
 @media (max-width: 800px) {
   .menu {
@@ -177,5 +276,27 @@ nav a:hover {
     cursor: pointer;
     color: white;
     transition: 0.4s ease;
+  }
+
+  /* THIRD SECTION RESPONSIVE CODE START  */
+
+  .parent-third-sec {
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  /* FOURTH SECTION RESPONSIVE CODE START  */
+  .parent-contact {
+    display: block;
+
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .single-contact-two input {
+    width: 300px;
+  }
+  .single-contact-two textarea {
+    width: 300px;
   }
 }
