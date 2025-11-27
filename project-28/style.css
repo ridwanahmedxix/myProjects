@@ -64,32 +64,6 @@ nav a:hover {
 }
 
 /* FIRST SECTION CODE START  */
-.first-sec-parent-div {
-  display: flex;
-  justify-content: space-around;
-  padding-top: 100px;
-  margin-left: 120px;
-  margin-right: 120px;
-}
-.single-first-sec-two h2 {
-  font-size: 80px;
-  padding-bottom: 20px;
-  color: rgb(3, 3, 3);
-}
-.single-first-sec-two p {
-  padding-bottom: 20px;
-  font-size: 20px;
-}
-.single-first-sec-two h4 {
-  padding-bottom: 20px;
-  font-size: 40px;
-  border-bottom: 2px solid red;
-  width: 300px;
-}
-.single-first-sec-two h5 {
-  padding: 20px 0;
-  font-size: 30px;
-}
 
 /* RESPONSIVE CODE START  */
 
@@ -106,10 +80,4 @@ nav a:hover {
     width: 100%;
   }
   /* FIRST SECTION RESPONSIVE CODE START  */
-  .first-sec-parent-div {
-    display: block;
-    padding-top: 100px;
-    margin-left: 20px;
-    margin-right: 20px;
-  }
 }
