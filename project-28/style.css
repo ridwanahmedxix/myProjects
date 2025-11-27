@@ -45,3 +45,15 @@ nav a {
   justify-content: flex-start;
   align-items: flex-start;
 }
+.menuBar {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .menuBar {
+    display: block;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+}
