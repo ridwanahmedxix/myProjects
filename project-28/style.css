@@ -1,0 +1,33 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-image: url("photo/bg-pppp.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+nav {
+  background-color: white;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+nav li {
+  list-style: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+nav a {
+  text-decoration: none;
+  padding: 0px 30px;
+  color: black;
+  font-size: 20px;
+}
