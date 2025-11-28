@@ -1,0 +1,9 @@
+body {
+  text-align: center;
+  font-size: 2rem;
+}
+button {
+  padding: 1px 30px;
+  font-size: 2rem;
+  cursor: pointer;
+}
