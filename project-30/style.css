@@ -23,9 +23,15 @@ nav ul li {
   height: 70px;
   display: flex;
   align-items: center;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease;
+}
+nav ul li:hover {
+  border-bottom: 2px solid rgb(13, 154, 13);
 }
 nav ul li:first-child {
   margin-right: auto;
+  border-bottom: none;
 }
 .logo-r {
   font-family: "Orbitron", sans-serif;
@@ -42,7 +48,7 @@ nav ul li a {
 }
 .parent-div {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   color: white;
   padding-top: 100px;
 }
@@ -51,4 +57,27 @@ nav ul li a {
   height: 300px;
   border-radius: 50%;
   border: 2px solid rgb(7, 173, 7);
+}
+.single-div-one h2 {
+  font-size: 45px;
+  padding-bottom: 20px;
+  color: #38f536;
+}
+.single-div-one p {
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+.single-div-one a button {
+  background-color: #00ff62;
+  border: 2px solid whitesmoke;
+  border-radius: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.single-div-one a button:hover {
+  background-color: #06c750;
+  border: 2px solid rgb(91, 199, 91);
+  color: white;
 }
