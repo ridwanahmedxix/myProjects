@@ -16,7 +16,9 @@ nav {
 nav ul {
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
+
 nav ul li {
   list-style: none;
   padding: 0px 30px;
@@ -26,9 +28,7 @@ nav ul li {
   border-bottom: 2px solid transparent;
   transition: 0.3s ease;
 }
-nav ul li:hover {
-  border-bottom: 2px solid rgb(13, 154, 13);
-}
+
 nav ul li:first-child {
   margin-right: auto;
   border-bottom: none;
@@ -45,6 +45,9 @@ nav ul li a {
   color: whitesmoke;
   text-decoration: none;
   font-size: 20px;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .parent-div {
   display: flex;
@@ -97,6 +100,12 @@ nav ul li a {
   justify-content: flex-start;
   align-items: flex-start;
 }
+.sideBar li {
+  width: 100%;
+}
+.sideBar a {
+  width: 100%;
+}
 .menu {
   display: none;
 }
@@ -110,11 +119,31 @@ nav ul li a {
   .hideOnMobile {
     display: none;
   }
+  .parent-div {
+    margin-left: 70px;
+    margin-right: 70px;
+  }
+  .menu {
+    padding-top: 7px;
+  }
 }
 @media (max-width: 500px) {
   .parent-div {
     display: block;
     text-align: center;
     padding-top: 100px;
+  }
+  .single-div-two {
+    margin-top: 50px;
+  }
+  .r-m-logo {
+    margin-left: 50px;
+  }
+  .parent-div {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  .menu {
+    padding-top: 6px;
   }
 }
