@@ -126,6 +126,9 @@ nav ul li a {
   .menu {
     padding-top: 7px;
   }
+  .sideBar a {
+    padding: 0 30px;
+  }
 }
 @media (max-width: 500px) {
   .parent-div {
@@ -142,6 +145,9 @@ nav ul li a {
   .parent-div {
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .sideBar a {
+    padding: 0 30px;
   }
   .menu {
     padding-top: 6px;
