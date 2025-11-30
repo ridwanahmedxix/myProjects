@@ -58,3 +58,25 @@ nav a:hover {
   width: 100%;
   color: gainsboro;
 }
+.menuHide {
+  display: none;
+}
+
+/* RESPONSIVE CODE START  */
+
+@media (max-width: 800px) {
+  .hideOnmobile {
+    display: none;
+  }
+  .menuHide {
+    display: block;
+  }
+}
+@media (max-width: 499px) {
+  .menuHide {
+    display: block;
+  }
+  .sideBar {
+    width: 100%;
+  }
+}
