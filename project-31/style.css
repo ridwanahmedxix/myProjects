@@ -9,3 +9,52 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+nav {
+  background-color: whitesmoke;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+nav li {
+  list-style: none;
+  height: 50px;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: 19px;
+  padding: 0px 30px;
+  transition: 0.4s;
+}
+nav a:hover {
+  background-color: #417dec;
+}
+.sideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  width: 250px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.429);
+  backdrop-filter: blur(10px);
+  justify-content: flex-start;
+  align-items: flex-start;
+  z-index: 999;
+}
+.sideBar li {
+  width: 100%;
+}
+.sideBar a {
+  width: 100%;
+  color: gainsboro;
+}

@@ -9,8 +9,15 @@
   </head>
   <body>
     <nav>
-      <ul>
-        <li><a href="#">Ridwan</a></li>
+      <ul class="sideBar">
+        <li onclick="closSideBar()">
+          <a href="#"
+            ><img
+              style="width: 26px; height: 26px; background-color: #ec4141e2"
+              src="photo/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
+              alt=""
+          /></a>
+        </li>
         <li><a href="#">Home</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Product</a></li>
@@ -18,6 +25,26 @@
         <li><a href="#">Contact</a></li>
       </ul>
     </nav>
+
+    <nav>
+      <ul>
+        <li><a href="#">Ridwan</a></li>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+        <li onclick="OpenSideBar()">
+          <a href="#"
+            ><img
+              style="width: 26px; height: 26px; background-color: green"
+              src="photo/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
+              alt=""
+          /></a>
+        </li>
+      </ul>
+    </nav>
+
     <script src="about.js"></script>
   </body>
 </html>
