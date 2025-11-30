@@ -3,3 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  min-height: 100vh;
+  background-image: url("photo/download.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
