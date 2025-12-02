@@ -135,6 +135,14 @@ nav a:hover {
   padding: 10px 0;
   font-weight: bold;
 }
+/* FOOTER SECTION CODE START  */
+
+footer {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
 
 /* RESPONSIVE CODE START  */
 @media (max-width: 480px) {
