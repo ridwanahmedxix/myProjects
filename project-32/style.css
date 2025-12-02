@@ -73,6 +73,21 @@ nav a:hover {
   font-size: 20px;
 }
 
+/* SECOND SECTION CODE - ABOUT  */
+#about {
+  padding: 70px 0px;
+  text-align: center;
+}
+#about h3 {
+  padding-bottom: 20px;
+  font-size: 30px;
+  color: black;
+}
+#about p {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.68);
+}
+
 /* RESPONSIVE CODE START  */
 @media (max-width: 480px) {
   /* Mobile styles */
