@@ -10,31 +10,34 @@
   <body>
     <nav>
       <ul class="sideBar">
-        <li onclick="closeSidebar()">
-          <a href="#" class="collageName"
-            ><img
+        <li>
+          <button onclick="closeSidebar()" class="collageName">
+            <img
               style="width: 26px; height: 26px; background-color: red"
               src="photo/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
               alt=""
-          /></a>
+            />
+          </button>
         </li>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#third">Notice</a></li>
-        <li><a href="#fourth">Contact</a></li>
+        <li><a href="#home" class="mobileNav">Home</a></li>
+        <li><a href="#about" class="mobileNav">About</a></li>
+        <li><a href="#third" class="mobileNav">Notice</a></li>
+        <li><a href="#fourth" class="mobileNav">Contact</a></li>
       </ul>
     </nav>
 
     <nav class="pFixed">
       <ul class="mg-top-ul">
         <li><a href="#" class="collageName">Jadur Char Model College</a></li>
-        <li><a href="#home" class="hideOnMobile">Home</a></li>
+        <li>
+          <a href="#home" class="hideOnMobile">Home</a>
+        </li>
         <li><a href="#about" class="hideOnMobile">About</a></li>
         <li><a href="#third" class="hideOnMobile">Notice</a></li>
         <li><a href="#fourth" class="hideOnMobile">Contact</a></li>
-        <li class="menuHide" onclick="openSidebar()">
-          <a href="#"
-            ><img
+        <li>
+          <button class="menuHide" onclick="openSidebar()">
+            <img
               style="
                 width: 26px;
                 height: 26px;
@@ -42,7 +45,8 @@
               "
               src="photo/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png"
               alt=""
-          /></a>
+            />
+          </button>
         </li>
       </ul>
     </nav>
