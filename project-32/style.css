@@ -54,3 +54,39 @@ nav a:hover {
 .sideBar a {
   width: 100%;
 }
+.menuHide {
+  display: none;
+}
+.pFixed {
+  /* position: static; */
+}
+
+/* RESPONSIVE CODE START  */
+@media (max-width: 480px) {
+  /* Mobile styles */
+  .menuHide {
+    display: block;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+  .mg-top-ul {
+    padding-top: 10px;
+  }
+  .collageName {
+    text-wrap: nowrap;
+    font-size: 20px;
+  }
+  .sideBar {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  /* Tablet styles */
+  .menuHide {
+    display: block;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+}
