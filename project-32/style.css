@@ -3,3 +3,33 @@
   margin: 0;
   box-sizing: border-box;
 }
+nav {
+  background-color: white;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+nav li {
+  list-style: none;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  font-size: 19px;
+  padding: 0px 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+nav a:hover {
+  color: blue;
+}
+.collageName {
+  font-weight: bold;
+  color: blue;
+  font-size: 25px;
+}
