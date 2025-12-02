@@ -187,4 +187,11 @@ footer {
     text-wrap: nowrap;
     font-size: 14px;
   }
+  .pFixed {
+    position: initial;
+  }
+
+  .mg-top-ul {
+    padding-top: 10px;
+  }
 }
