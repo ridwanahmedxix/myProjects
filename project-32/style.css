@@ -57,6 +57,13 @@ nav a:hover {
 .menuHide {
   display: none;
 }
+.pFixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
 
 /* FIRST SECTION CODE - HOME  */
 #home {
@@ -64,6 +71,7 @@ nav a:hover {
   color: white;
   padding: 50px 0px;
   text-align: center;
+  margin-top: 30px;
 }
 #home h3 {
   padding-bottom: 20px;
@@ -162,6 +170,9 @@ footer {
   }
   .sideBar {
     width: 100%;
+  }
+  .pFixed {
+    position: initial;
   }
 }
 @media (max-width: 768px) {
