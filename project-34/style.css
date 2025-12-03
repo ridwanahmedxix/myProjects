@@ -31,6 +31,22 @@ nav a {
   height: 100%;
   font-size: 20px;
 }
+.sideBar a {
+  width: 100%;
+}
+nav {
+  background-color: whitesmoke;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+body {
+  padding-top: 60px;
+}
+
 .sideBar {
   position: fixed;
   top: 0;
@@ -47,9 +63,7 @@ nav a {
 .sideBar li {
   width: 100%;
 }
-.sideBar a {
-  width: a;
-}
+
 .menuHide {
   display: none;
 }
