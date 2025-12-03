@@ -3,6 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 nav {
   background-color: whitesmoke;
@@ -234,7 +237,8 @@ nav a {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     padding: 70px 0;
-    margin: 0px 30px;
+    grid-gap: 10px;
+    margin: 0px 20px;
   }
 }
 
@@ -265,6 +269,6 @@ nav a {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     padding: 70px 0;
-    margin: 0px 70px;
+    margin: 0px 50px;
   }
 }
