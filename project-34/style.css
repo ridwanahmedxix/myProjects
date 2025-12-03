@@ -53,6 +53,38 @@ nav a {
 .menuHide {
   display: none;
 }
+.myHome {
+  font-size: 25px;
+  font-weight: bold;
+}
+/* FIST SECTION CODE START  */
+.parent-first-div {
+  text-align: center;
+  padding: 150px 50px 70px 50px;
+}
+.parent-first-div h2 {
+  color: white;
+  font-size: 40px;
+  padding: 20px 0;
+}
+.parent-first-div p {
+  font-size: 25px;
+  color: rgb(214, 223, 231);
+  font-family: Arial, Helvetica, sans-serif;
+  padding-bottom: 20px;
+}
+.parent-first-div a button {
+  font-size: 20px;
+  padding: 15px 30px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+.parent-first-div a button:hover {
+  background-color: rgba(240, 233, 233, 0.89);
+}
 
 /* RESPONSIVE CODE START  */
 
