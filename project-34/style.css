@@ -44,3 +44,34 @@ nav a {
   justify-content: flex-start;
   align-items: flex-start;
 }
+.sideBar li {
+  width: 100%;
+}
+.sideBar a {
+  width: a;
+}
+.menuHide {
+  display: none;
+}
+
+/* RESPONSIVE CODE START  */
+
+/* Mobile devices (portrait) */
+@media only screen and (max-width: 600px) {
+  .menuHide {
+    display: block;
+  }
+  .hideOnMobileTab {
+    display: none;
+  }
+}
+
+/* Tablets (landscape or portrait) */
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+  .menuHide {
+    display: block;
+  }
+  .hideOnMobileTab {
+    display: none;
+  }
+}
