@@ -126,6 +126,41 @@ nav a {
   font-size: 18px;
 }
 
+/* THIRD SECTION CODE START  */
+#third {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: azure;
+}
+.parent-third-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding-top: 30px;
+  margin: 0px 100px;
+}
+#third h2 {
+  font-size: 37px;
+}
+.single-third {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.single-third:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.single-third h3 {
+  padding: 20px 0;
+  font-size: 25px;
+}
+.single-third p {
+  padding-bottom: 20px;
+}
 /* RESPONSIVE CODE START  */
 
 /* Mobile devices (portrait) */
@@ -133,10 +168,20 @@ nav a {
   .menuHide {
     display: block;
   }
+  .sideBar {
+    width: 100%;
+  }
   .hideOnMobileTab {
     display: none;
   }
   .parent-second-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    padding-top: 30px;
+    margin: 0px 30px;
+  }
+  .parent-third-div {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
@@ -152,5 +197,22 @@ nav a {
   }
   .hideOnMobileTab {
     display: none;
+  }
+  .parent-first-div {
+    padding-top: 300px;
+  }
+  .parent-second-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    padding-top: 30px;
+    margin: 0px 70px;
+  }
+  .parent-third-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    padding-top: 30px;
+    margin: 0px 70px;
   }
 }
