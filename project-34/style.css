@@ -3,10 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
-body {
-  min-height: 100vh;
-  background-color: #59bef0;
-}
+
 nav {
   background-color: whitesmoke;
 }
@@ -58,6 +55,10 @@ nav a {
   font-weight: bold;
 }
 /* FIST SECTION CODE START  */
+#first {
+  min-height: 100vh;
+  background-color: #59bef0;
+}
 .parent-first-div {
   text-align: center;
   padding: 150px 50px 70px 50px;
@@ -85,6 +86,45 @@ nav a {
 .parent-first-div a button:hover {
   background-color: rgba(240, 233, 233, 0.89);
 }
+/* SECOND SECTION CODE START  */
+#second {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: beige;
+}
+#second h2 {
+  font-size: 40px;
+}
+.parent-second-div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding-top: 30px;
+  margin: 0px 100px;
+}
+.single-second:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.single-second {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  transition: 0.4s;
+}
+.single-second i {
+  padding: 20px 0;
+  font-size: 30px;
+  color: #16a3e9;
+}
+.single-second h3 {
+  font-size: 25px;
+  padding-bottom: 20px;
+}
+.single-second p {
+  padding-bottom: 20px;
+  font-size: 18px;
+}
 
 /* RESPONSIVE CODE START  */
 
@@ -95,6 +135,13 @@ nav a {
   }
   .hideOnMobileTab {
     display: none;
+  }
+  .parent-second-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    padding-top: 30px;
+    margin: 0px 30px;
   }
 }
 
