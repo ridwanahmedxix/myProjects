@@ -95,12 +95,13 @@ nav a {
 }
 #second h2 {
   font-size: 40px;
+  padding-top: 30px;
 }
 .parent-second-div {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  padding-top: 30px;
+  padding: 60px 0;
   margin: 0px 100px;
 }
 .single-second:hover {
@@ -137,11 +138,12 @@ nav a {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  padding-top: 30px;
+  padding: 60px 0;
   margin: 0px 100px;
 }
 #third h2 {
   font-size: 37px;
+  padding-top: 30px;
 }
 .single-third {
   background-color: white;
@@ -161,6 +163,48 @@ nav a {
 .single-third p {
   padding-bottom: 20px;
 }
+.single-fourth {
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.single-fourth:hover {
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.single-fourth p {
+  font-size: 20px;
+  padding: 40px 0;
+}
+.sf-1 {
+  background-color: #d3ff73;
+}
+.sf-2 {
+  background-color: #73e3ff;
+}
+.sf-3 {
+  background-color: #ff73c9;
+}
+.sf-4 {
+  background-color: #73ff7f;
+}
+
+/* FOURTH SECTION CODE START  */
+#fourth {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
+  background-color: whitesmoke;
+}
+.parent-fourth-div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 70px 0;
+  margin: 0px 100px;
+}
+
 /* RESPONSIVE CODE START  */
 
 /* Mobile devices (portrait) */
@@ -177,15 +221,19 @@ nav a {
   .parent-second-div {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
     padding-top: 30px;
     margin: 0px 30px;
   }
   .parent-third-div {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
     padding-top: 30px;
+    margin: 0px 30px;
+  }
+  .parent-fourth-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 70px 0;
     margin: 0px 30px;
   }
 }
@@ -204,15 +252,19 @@ nav a {
   .parent-second-div {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
     padding-top: 30px;
     margin: 0px 70px;
   }
   .parent-third-div {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 20px;
     padding-top: 30px;
+    margin: 0px 70px;
+  }
+  .parent-fourth-div {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 70px 0;
     margin: 0px 70px;
   }
 }
