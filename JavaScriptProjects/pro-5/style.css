@@ -73,3 +73,19 @@ form button {
   object-fit: cover;
   border-radius: 5px;
 }
+
+@media (max-width: 600px) {
+  #search-result {
+    width: 80%;
+    margin: 100px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+  }
+}
+@media (max-width: 900px) {
+  #search-result {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+  }
+}
