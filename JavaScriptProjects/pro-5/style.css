@@ -4,3 +4,47 @@
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
+body {
+  background-color: rgb(37, 37, 105);
+  color: white;
+}
+h1 {
+  text-align: center;
+  margin: 100px auto 50px;
+}
+form {
+  max-width: 600px;
+  width: 90%;
+  height: 80px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  background-color: rgba(100, 147, 234, 0.368);
+  border-radius: 10px;
+}
+
+form input {
+  flex: 1;
+  height: 100%;
+  border: 0;
+  outline: 0;
+  background-color: transparent;
+  color: white;
+  font-size: 18px;
+  padding: 0px 30px;
+}
+form button {
+  padding: 0px 30px;
+  height: 100%;
+  background-color: crimson;
+  color: white;
+  font-size: 18px;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 0px 10px 10px 0px;
+}
+::placeholder {
+  color: #fff;
+  font-size: 18px;
+}
