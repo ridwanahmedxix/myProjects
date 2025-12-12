@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div id="calculator">
+      <input id="display" readonly type="text" />
+
+      <div id="allbtn">
+        <button class="btnDesign" onclick="appendtext('+')">+</button>
+        <button onclick="appendtext('7')">7</button>
+        <button onclick="appendtext('8')">8</button>
+        <button onclick="appendtext('9')">9</button>
+        <button class="btnDesign" onclick="appendtext('-')">-</button>
+        <button onclick="appendtext('4')">4</button>
+        <button onclick="appendtext('5')">5</button>
+        <button onclick="appendtext('6')">6</button>
+        <button class="btnDesign" onclick="appendtext('*')">X</button>
+        <button onclick="appendtext('1')">1</button>
+        <button onclick="appendtext('2')">2</button>
+        <button onclick="appendtext('3')">3</button>
+        <button class="btnDesign" onclick="appendtext('/')">/</button>
+        <button onclick="appendtext('.')">.</button>
+        <button onclick="appendtext('0')">0</button>
+        <button onclick="clearDisplay()">AC</button>
+        <button class="calbtn" onclick="calculation()">=</button>
+      </div>
+    </div>
     <script src="about.js"></script>
   </body>
 </html>
