@@ -1,13 +1,15 @@
-const qrInput = document.getElementById("qr-input");
-const qrBtn = document.getElementById("qr-btn");
-const qrImg = document.getElementById("qr-img");
+const qrInput = document.getElementById("qrInput");
+const qrBtn = document.getElementById("qrBtn");
+const imgBtn = document.getElementById("imgBtn");
+const clearBtn = document.getElementById("clearBtn");
 
 qrBtn.addEventListener("click", () => {
   let inputValue = qrInput.value;
 
   if (!inputValue) {
-    alert("Wrong Info");
+    alert("Wrong Ifo");
   } else {
-    qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${inputValue}`;
+    imgBtn.src = `https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${inputValue}`;
+    clearBtn.style.display = "block";
   }
 });

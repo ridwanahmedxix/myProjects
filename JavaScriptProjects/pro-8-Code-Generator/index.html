@@ -8,11 +8,14 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="qr-div">
-      <h2>QR Code Generator</h2>
-      <input type="text" id="qr-input" placeholder="Your Website link add" />
-      <button id="qr-btn">SUBMIT</button>
-      <img id="qr-img" src="" alt="" />
+    <div class="qrDiv">
+      <h2>qr code generator</h2>
+      <input id="qrInput" placeholder="Your Link ?" type="text" />
+      <button id="qrBtn">SUBMIT</button>
+      <button id="clearBtn" onclick="location.reload() " style="display: none">
+        Clear
+      </button>
+      <img id="imgBtn" src="" alt="" />
     </div>
     <script src="about.js"></script>
   </body>
