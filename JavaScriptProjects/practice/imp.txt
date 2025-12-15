@@ -152,3 +152,9 @@ body {
 #allbtn button[onclick*="clearDisplay"]:hover {
   background: #e05757;
 }
+
+
+----------------------------------------------------
+
+
+`https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=${inputValue}`;
