@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#qrDiv {
+  margin-top: 100px;
+  background-color: aqua;
+  padding: 25px;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+input {
+  display: block;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+button {
+  padding: 15px 20px;
+  display: block;
+  margin: auto;
+}
