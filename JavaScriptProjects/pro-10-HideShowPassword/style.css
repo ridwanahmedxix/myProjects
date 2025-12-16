@@ -2,5 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  min-height: 100vh;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputContainer {
+  margin-top: 200px;
 }
