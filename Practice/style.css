@@ -1,0 +1,52 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: blue;
+}
+nav {
+  background-color: white;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+nav li {
+  list-style: none;
+  height: 50px;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+nav a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  text-decoration: none;
+  font-size: 19px;
+  padding: 0px 30px;
+}
+.sideBar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.501);
+  backdrop-filter: blur(10px);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+@media (max-width: 600px) {
+  .hideMobile {
+    display: none;
+  }
+}
