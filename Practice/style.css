@@ -44,9 +44,20 @@ nav a {
   justify-content: flex-start;
   align-items: flex-start;
 }
-
+.sideBar li {
+  width: 100%;
+}
+.sideBar a {
+  width: 100%;
+}
+.sideBarHideMobile {
+  display: none;
+}
 @media (max-width: 600px) {
   .hideMobile {
     display: none;
+  }
+  .sideBarHideMobile {
+    display: block;
   }
 }
