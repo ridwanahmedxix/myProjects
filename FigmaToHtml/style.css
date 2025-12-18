@@ -1,0 +1,584 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  background-color: #f5f5f5;
+}
+
+/* ===== DESKTOP ===== */
+.nav-parent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 45px;
+}
+
+.nav-parent ul {
+  display: flex;
+  align-items: center;
+}
+
+.nav-parent ul li {
+  list-style: none;
+  padding: 30px 10px;
+}
+
+.nav-parent ul li a {
+  text-decoration: none;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  color: #0d0a19;
+  margin-left: 20px;
+}
+
+.navSignUp {
+  border: none;
+  background: none;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 14px;
+  color: #9a9ea7;
+  cursor: pointer;
+}
+
+.navSignImg {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  width: 30px;
+  height: 25px;
+  padding: 5px 8px;
+}
+
+/* ===== HAMBURGER ===== */
+#menu-toggle {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  margin: 4px 0;
+}
+
+/* SECTION 1 CODE START  */
+.section1 {
+  background-image: url("photo/Rectangle.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 560px;
+}
+.section1 h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 74px;
+  text-align: center;
+  letter-spacing: -0.304762px;
+  color: #ffffff;
+  padding-top: 100px;
+}
+.sec1MainP {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 13px;
+}
+.parentTopFooter {
+  max-width: 900px;
+  margin: 170px auto 0px;
+  padding: 15px 20px;
+  width: 100%;
+  align-items: center;
+  background: #ffffff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+.singleDivtf p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+  padding-bottom: 5px;
+}
+.singleDivtf select {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.1px;
+  color: #0d0a19;
+  border: none;
+}
+.sec1Btn1 {
+  background-color: #7963f0;
+  align-items: center;
+  display: flex;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.1px;
+  color: #ffffff;
+}
+.sec1Btn1 img {
+  margin-right: 5px;
+}
+
+.diff1 {
+  margin-top: 12px;
+}
+.sec1Br {
+  display: none;
+}
+
+/* SECTION 2 CODE START  */
+.section2 {
+  margin: 80px 20px;
+}
+
+.sec2parent {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  text-align: center;
+}
+
+/* SECTION 3 CODE START  */
+.section3 {
+  margin: 30px 0px 100px 0px;
+}
+
+.section3 h1 {
+  text-align: center;
+  font-family: "Inter";
+  margin: 30px 0;
+}
+.parentSec3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+.singleSec3 h3 {
+  margin: 15px 0px 5px 0px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 27px;
+  color: #0d0a19;
+}
+.singleSec3 h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+  margin-bottom: 15px;
+}
+.singleSec3 p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+  margin-bottom: 15px;
+}
+.btnDivSec3One {
+  background: #7963f0;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  color: #ffffff;
+  margin-right: 7px;
+  cursor: pointer;
+}
+.btnDivSec3Two {
+  background: #9e9ca7ed;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: -0.1px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* SECTION 4 CODE START  */
+.section4 {
+  margin: 80px 0px;
+}
+.parentSec4Div {
+  display: flex;
+  justify-content: center;
+  margin: 0px 90px;
+}
+.sec4SingleDiv {
+  padding-right: 40px;
+}
+.sec4SingleDivTwo {
+  max-width: 800px;
+  width: 90%;
+}
+
+.sec4SingleDiv h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  letter-spacing: -0.1px;
+  color: #0d0a19;
+}
+
+.sec4SingleDiv h4 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.1px;
+  color: #0d0a19;
+  margin-bottom: 25px;
+}
+.sec4SingleDiv p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+  margin-bottom: 25px;
+}
+
+.sec4SingleDiv button {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+  background: #f5f6f7;
+  border-radius: 10px;
+  padding: 15px 22px;
+  border: none;
+}
+
+/* FOOTER SECTION CODE START  */
+footer {
+  margin: 80px 0;
+}
+.parentFooter {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+}
+.singleFooter h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.1px;
+  color: #0d0a19;
+  margin-bottom: 20px;
+}
+.singleFooter p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 33px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+}
+.footerUnderDiv {
+  background-color: gainsboro;
+  padding: 20px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.footerUnderDiv h2 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.1px;
+  color: #0d0a19;
+  margin-right: 15px;
+}
+.footerUnderDiv p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.1px;
+  color: #9a9ea7;
+}
+
+/* ===== TABLET SIDEBAR (iPad Air) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .menu-icon {
+    display: flex;
+    /* position: fixed;
+    top: 10px;
+    right: 25px; */
+    z-index: 1000;
+  }
+
+  .navLogo {
+    margin-top: 8px;
+  }
+  .menu-icon {
+    display: flex;
+  }
+
+  .nav-parent {
+    position: relative;
+  }
+
+  .nav-parent ul {
+    position: fixed;
+    top: 0;
+    right: -280px;
+    width: 260px;
+    height: 100vh;
+    background: #ffffff;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 80px;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-parent ul li {
+    width: 100%;
+    padding: 15px 25px;
+  }
+
+  .nav-parent ul li a {
+    font-size: 15px;
+  }
+
+  /* Sidebar open */
+  #menu-toggle:checked ~ ul {
+    right: 0;
+  }
+  /* SECTION 1 CODE START  */
+
+  /* SECTION 2 CODE START  */
+  .section2 {
+    margin: 160px 20px 50px 20px;
+  }
+
+  .sec2parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* SECTION 3 CODE START  */
+
+  .parentSec3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 40px;
+    place-items: center;
+  }
+  /* SECTION 4 CODE START  */
+
+  .parentSec4Div {
+    display: block;
+    margin: auto;
+    margin: 0px 50px;
+  }
+  .sec4SingleDiv {
+    padding-right: 0px;
+  }
+
+  /* FOOTER SECTION CODE START  */
+
+  .parentFooter {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: flex;
+  }
+  .navLogo {
+    margin-top: 7px;
+  }
+
+  .nav-parent ul {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: #f5f5f5;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+  }
+
+  .nav-parent ul li {
+    padding: 15px 0;
+  }
+
+  #menu-toggle:checked ~ ul {
+    display: flex;
+  }
+
+  /* SECTION 1 CODE START  */
+  .section1 {
+    background-position: center;
+  }
+  .section1 h1 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #ffffff;
+    margin: 0px 30px;
+  }
+  .sec1MainP {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    text-align: center;
+    letter-spacing: -0.1px;
+    color: #ffffff;
+  }
+  .parentTopFooter {
+    margin: 130px auto 0px;
+    padding: 15px 20px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 500px;
+    width: 90%;
+  }
+  .singleDivtf {
+    border-bottom: 1px solid black;
+    padding: 30px 0;
+  }
+  .singleDivtf select {
+    width: 100%;
+  }
+  .diff2 {
+    border: none;
+  }
+  .sec1Btn1 {
+    width: 100%;
+    text-align: center;
+    display: block;
+    border: none;
+  }
+  .aRemove a {
+    text-decoration: none;
+  }
+
+  .sec1Br {
+    display: block;
+  }
+  .sec1HideBr {
+    display: none;
+  }
+  /* SECTION 2 CODE START  */
+
+  .section2 {
+    margin: 540px 20px 50px 20px;
+  }
+
+  .sec2parent {
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  /* SECTION 3 CODE START  */
+  .parentSec3 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 30px;
+    place-items: center;
+  }
+
+  /* SECTION 4 CODE START  */
+
+  .parentSec4Div {
+    display: block;
+    margin: auto;
+    margin: 0px 20px;
+  }
+  .sec4SingleDiv {
+    padding-right: 0px;
+  }
+  .sec4SingleDivTwo {
+    display: none;
+  }
+
+  /* FOOTER SECTION CODE START  */
+
+  .parentFooter {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    place-items: center;
+  }
+}
