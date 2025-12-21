@@ -2,8 +2,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
-
+body {
+  background-color: rgb(217, 217, 217);
+}
 nav {
   display: flex;
   align-items: center;
@@ -35,4 +38,28 @@ nav a {
   object-fit: cover;
   border-radius: 50%;
   cursor: pointer;
+}
+
+/* POPUP CODE START  */
+
+.userCard {
+  background-color: #ffffff;
+  /* color: rgb(49, 47, 47); */
+  width: 230px;
+  height: 300px;
+  position: absolute;
+  top: 80px;
+  right: 30px;
+}
+
+.subMenu {
+  display: flex;
+  align-items: center;
+  margin: 15px 8px 0px 12px;
+}
+.subMenu img {
+  margin-right: 8px;
+}
+.subMenu h3 {
+  font-size: 16px;
 }
