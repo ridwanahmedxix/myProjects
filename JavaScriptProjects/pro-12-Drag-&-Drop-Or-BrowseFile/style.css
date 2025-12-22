@@ -14,6 +14,7 @@ body {
 
 .appBody {
   background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 600px;
   height: 500px;
   border: 2px solid dotted;
@@ -27,4 +28,23 @@ body {
 .icon i {
   font-size: 100px;
   color: green;
+  opacity: 60%;
+}
+.appBody h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+.appBody span {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.appBody button {
+  border: none;
+  color: green;
+  background-color: white;
+  font-size: 22px;
+  cursor: pointer;
+  font-weight: 600;
 }
