@@ -22,7 +22,7 @@ body {
   padding: 50px;
 }
 
-.appBody:hover {
+.appBody.active {
   border: 3px solid rgb(40, 176, 40);
 }
 .icon {
