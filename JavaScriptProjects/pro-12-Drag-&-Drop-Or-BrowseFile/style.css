@@ -11,3 +11,20 @@ body {
   background-color: #f1f1f1;
   height: 100vh;
 }
+
+.appBody {
+  background-color: white;
+  width: 600px;
+  height: 500px;
+  border: 2px solid dotted;
+  text-align: center;
+  padding: 50px;
+}
+.icon {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.icon i {
+  font-size: 100px;
+  color: green;
+}
