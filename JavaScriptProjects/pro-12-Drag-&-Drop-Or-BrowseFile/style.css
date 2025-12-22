@@ -17,9 +17,13 @@ body {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   width: 600px;
   height: 500px;
-  border: 2px solid dotted;
+  border: 3px dotted rgba(0, 0, 0, 0.678);
   text-align: center;
   padding: 50px;
+}
+
+.appBody:hover {
+  border: 3px solid rgb(40, 176, 40);
 }
 .icon {
   margin-top: 50px;
