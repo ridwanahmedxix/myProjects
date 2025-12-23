@@ -64,22 +64,51 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: translate(-50%, -50%);
   border-radius: 48px;
-  padding: 30px;
 }
 .rulesTitle {
   text-align: center;
   font-size: 20px;
   font-weight: 600;
   border-bottom: 1px solid lightgray;
-  padding: 5px;
+  padding: 5px 5px 15px 5px;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 .rulesList {
   width: 90%;
   margin: auto;
+  padding: 10px 30px;
 }
 .olLi li {
   font-size: 17px;
   font-weight: 500;
   padding: 10px 0px;
+}
+.buttons {
+  display: flex;
+}
+.buttons button {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: rgb(27, 180, 27);
+  border: none;
+  outline: none;
+  color: white;
+  padding: 18px 25px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  margin-top: 78px;
+}
+.exitBtn {
+  border-radius: 0px 47px 0px 46px;
+}
+.exitBtn:hover {
+  background-color: rgb(36, 211, 211);
+}
+.contiBtn {
+  border-radius: 57px 0px 46px;
+  margin-left: 55px;
+}
+.exitBtn:hover {
+  background-color: rgb(36, 211, 211);
 }
