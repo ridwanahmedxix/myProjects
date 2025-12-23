@@ -51,3 +51,35 @@ body {
 .myBtn button:hover {
   background-color: rgb(36, 211, 211);
 }
+
+/* PAGE NUMBER 2 CODE START  */
+
+.rulesBox {
+  width: 320px;
+  height: 580px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  transform: translate(-50%, -50%);
+  border-radius: 48px;
+  padding: 30px;
+}
+.rulesTitle {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  border-bottom: 1px solid lightgray;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+.rulesList {
+  width: 90%;
+  margin: auto;
+}
+.olLi li {
+  font-size: 17px;
+  font-weight: 500;
+  padding: 10px 0px;
+}
