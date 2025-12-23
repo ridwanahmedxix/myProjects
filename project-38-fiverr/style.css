@@ -1,0 +1,210 @@
+:root {
+  --primary: #8b1e1e;
+  --dark: #111;
+  --light: #f5f2ed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  background: var(--light);
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  background: #111;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-outline {
+  border: 2px solid white;
+  padding: 10px 18px;
+  color: white;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: url("https://images.unsplash.com/photo-1504674900247-0877df9cc836")
+    center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+/* ABOUT */
+.about {
+  padding: 80px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+/* MENU */
+.menu {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.menu-items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.menu-card {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+
+.menu-card:hover {
+  transform: translateY(-8px);
+}
+
+.menu-card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+/* OFFER */
+.offer {
+  background: var(--primary);
+  color: white;
+  padding: 50px;
+  text-align: center;
+}
+
+/* GALLERY */
+.gallery {
+  padding: 80px 20px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* TESTIMONIAL */
+.testimonials {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* RESERVATION */
+.reservation {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.reservation form {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.reservation input,
+.reservation button {
+  padding: 10px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+footer iframe {
+  width: 100%;
+  height: 200px;
+  margin-top: 20px;
+  border: 0;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: #111;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
