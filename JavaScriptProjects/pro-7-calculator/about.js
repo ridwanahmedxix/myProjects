@@ -14,3 +14,6 @@ function calculation() {
     display.value = "Error";
   }
 }
+function deleteOne() {
+  display.value = display.value.slice(0, -1);
+}
