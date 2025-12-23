@@ -27,11 +27,12 @@ body {
 }
 .allText h3 {
   margin-top: 20px;
+  padding-bottom: 15px;
 }
 
 .myBtn {
   margin-left: 160px !important;
-  margin-top: 33px;
+  margin-top: 2px;
   width: 60%;
 }
 
