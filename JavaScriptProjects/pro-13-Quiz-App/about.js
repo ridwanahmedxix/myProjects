@@ -13,5 +13,6 @@ exitBtn.onclick = () => {
 };
 
 contiBtn.onclick = () => {
-  questions.classList.add("activeInfo");
+  rulesBox.classList.remove("activeInfo");
+  questions.classList.add("activeQuiz");
 };

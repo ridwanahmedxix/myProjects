@@ -139,7 +139,7 @@ body {
   pointer-events: none;
   overflow: hidden;
 }
-.questions.activeInfo {
+.questions.activeQuiz {
   opacity: 1;
   z-index: 5;
   pointer-events: auto;
