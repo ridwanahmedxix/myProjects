@@ -15,4 +15,11 @@ exitBtn.onclick = () => {
 contiBtn.onclick = () => {
   rulesBox.classList.remove("activeInfo");
   questions.classList.add("activeQuiz");
+  showQuestions();
 };
+
+function showQuestions() {
+  const que_text = document.querySelector(".ParentTextWDH");
+  let que_tag = "<span>" + questionsList[0].question + "</span>";
+  que_text.innerHTML = que_tag;
+}
