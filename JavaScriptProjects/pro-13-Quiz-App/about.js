@@ -22,7 +22,18 @@ function showQuestions(index) {
   const que_text = document.querySelector(".ParentTextWDH");
   const option_list = document.querySelector(".myOptions");
   let option_tag =
-    "<div class='options'>" + questionsList[index].options + "</div>";
+    "<div class='options'>" +
+    questionsList[index].options[0] +
+    "</div>" +
+    "<div class='options'>" +
+    questionsList[index].options[1] +
+    "</div>" +
+    "<div class='options'>" +
+    questionsList[index].options[2] +
+    "</div>" +
+    "<div class='options'>" +
+    questionsList[index].options[3] +
+    "</div>";
 
   let que_tag =
     "<span>" +
