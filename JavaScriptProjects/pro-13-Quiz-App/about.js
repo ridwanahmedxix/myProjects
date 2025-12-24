@@ -65,11 +65,16 @@ function showQuestions(index) {
   const optionTa = option_list.querySelectorAll(".options");
 
   for (let i = 0; i < optionTa.length; i++) {
-    optionTa[i].setAttribute("onclick", "optionSelected(this)0");
+    optionTa[i].setAttribute("onclick", "optionSelected(this)");
   }
 }
 
 function optionSelected(answer) {
   let userAns = answer.textContent;
-  let correctAns = questionsList[que_count];
+  let correctAns = questionsList[que_count].answer;
+  if (userAns == correctAns) {
+    console.log("right");
+  } else {
+    console.log("wrong ans");
+  }
 }

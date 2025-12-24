@@ -1,14 +1,10 @@
 let questionsList = [
   {
     numb: 1,
-    question: "What Does HTML Stand For",
-    answer: "Hyper Text Markup Language",
-    options: [
-      "  Hyper Text Preprocessor ",
-      " Hyper Text Markup Language ",
-      " Hyper Text Multiple Language ",
-      " Hyper Tool Multi Language ",
-    ],
+    question:
+      "Which programming concept allows code to be reused multiple times?",
+    answer: "Function",
+    options: ["Loop", "Variable", "Function", "Array"],
   },
 
   {
