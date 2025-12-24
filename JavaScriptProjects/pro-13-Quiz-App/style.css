@@ -250,8 +250,17 @@ body {
 .nextBtn:hover {
   background-color: rgb(38, 218, 218);
 }
-.options correct {
+.options.correct {
   color: #155724;
   background: #d4edda;
   border: 1px solid #c3e6cb;
+}
+
+.options.Incorrect {
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+.options.disabled {
+  pointer-events: none;
 }

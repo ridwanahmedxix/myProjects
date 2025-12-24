@@ -70,11 +70,19 @@ function showQuestions(index) {
 }
 
 function optionSelected(answer) {
+  const option_list = document.querySelector(".myOptions");
   let userAns = answer.textContent;
   let correctAns = questionsList[que_count].answer;
+  let allOptions = option_list.children.length;
   if (userAns == correctAns) {
+    answer.classList.add("correct");
     console.log("right");
   } else {
+    answer.classList.add("Incorrect");
     console.log("wrong ans");
+  }
+
+  for (let i = 0; i < allOptions; i++) {
+    option_list.children[i].classList.add("disabled");
   }
 }
