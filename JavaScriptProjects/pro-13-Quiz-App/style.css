@@ -13,7 +13,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: fff;
+  background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: translate(-50%, -50%);
   border-radius: 48px;
@@ -60,7 +60,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: fff;
+  background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: translate(-50%, -50%);
   border-radius: 48px;
@@ -121,7 +121,7 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  background-color: fff;
+  background-color: #fff;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: translate(-50%, -50%);
   border-radius: 48px;
@@ -170,4 +170,7 @@ body {
   left: 0px;
   height: 3px;
   background: #007bff;
+}
+.questionSection {
+  padding: 25px 30px 20px 30px;
 }
