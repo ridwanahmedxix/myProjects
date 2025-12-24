@@ -64,6 +64,14 @@ body {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   transform: translate(-50%, -50%);
   border-radius: 48px;
+  opacity: 0;
+  pointer-events: none;
+}
+.rulesBox.activeInfo {
+  opacity: 1;
+  z-index: 5;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
 }
 .rulesTitle {
   text-align: center;
