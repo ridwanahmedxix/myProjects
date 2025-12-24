@@ -30,10 +30,11 @@ let questionsList = [
   },
   {
     numb: 4,
-    question: "Which HTML tag is used to create a hyperlink",
-    answer: "<a>",
-    options: ["<link>", "<a>", "<href>", "<url>"],
+    question: "Which language is used to style web pages?",
+    answer: "CSS",
+    options: ["HTML", "CSS", "JavaScript", "Python"],
   },
+  ,
   {
     numb: 5,
     question: "Which CSS property is used to change text color",

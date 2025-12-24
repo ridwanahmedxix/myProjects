@@ -18,6 +18,19 @@ contiBtn.onclick = () => {
   showQuestions(0);
 };
 
+const nextBtn = document.querySelector(".nextBtn");
+
+let que_count = 0;
+
+nextBtn.onclick = () => {
+  if (que_count < questionsList.length - 1) {
+    que_count++;
+    showQuestions(que_count);
+  } else {
+    console.log("You Have Completd Your Task");
+  }
+};
+
 function showQuestions(index) {
   const que_text = document.querySelector(".ParentTextWDH");
   const option_list = document.querySelector(".myOptions");
@@ -44,4 +57,19 @@ function showQuestions(index) {
   que_text.innerHTML = que_tag;
 
   option_list.innerHTML = option_tag;
+
+  const total_que = document.querySelector(".total_que");
+  let total_queTagv = "<p>" + questionsList[index].numb + " Of 5 </p>";
+  total_que.innerHTML = total_queTagv;
+
+  const optionTa = option_list.querySelectorAll(".options");
+
+  for (let i = 0; i < optionTa.length; i++) {
+    optionTa[i].setAttribute("onclick", "optionSelected(this)0");
+  }
+}
+
+function optionSelected(answer) {
+  let userAns = answer.textContent;
+  let correctAns = questionsList[que_count];
 }
