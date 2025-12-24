@@ -217,7 +217,7 @@ body {
 .nextBtn {
   font-size: 20px;
   font-weight: 600;
-  padding: 6px 25px;
+  padding: 13px 25px;
   outline: none;
   border: none;
   border-radius: 57px 0px 51px 0px;
@@ -226,5 +226,8 @@ body {
   cursor: pointer;
   color: #f1f1f1;
   transition: all 0.3s ease;
-  margin-top: 11px;
+  margin-top: 21px;
+}
+.nextBtn:hover {
+  background-color: rgb(38, 218, 218);
 }
