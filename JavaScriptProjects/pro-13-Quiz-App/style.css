@@ -179,5 +179,34 @@ body {
   font-weight: 600;
 }
 .ParentTextWDH {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+}
+.myOptions {
+  padding: 20px 0px;
+  display: block;
+}
+.options {
+  background: aliceblue;
+  border: 1px solid #84c5fe;
+  border-radius: 5px;
+  padding: 8px 15px;
+  font-size: 17px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.options:hover {
+  color: #004085;
+  background: #cce5ff;
+  border: 1px solid #b8daff;
+}
+.pageNum3Footer {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid lightgray;
 }
