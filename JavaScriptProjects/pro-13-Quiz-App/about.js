@@ -80,6 +80,12 @@ function optionSelected(answer) {
   } else {
     answer.classList.add("Incorrect");
     console.log("wrong ans");
+
+    for (let i = 0; i < allOptions; i++) {
+      if (option_list.children[i].textContent == correctAns) {
+        option_list.children[i].setAttribute("class", "options correct");
+      }
+    }
   }
 
   for (let i = 0; i < allOptions; i++) {
