@@ -18,7 +18,6 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 48px;
   overflow: hidden;
-  display: none;
 }
 .img img {
   width: 100%;
@@ -283,7 +282,6 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   background-color: #fff;
   border-radius: 45px;
@@ -291,7 +289,8 @@ body {
   flex-direction: column;
   justify-content: center;
   transition: all 0.3s ease;
-  opacity: 1;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.9);
 }
 .ResultImg img {
   width: 100%;
