@@ -264,3 +264,10 @@ body {
 .options.disabled {
   pointer-events: none;
 }
+.time_lines {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  background: #007bff;
+}
