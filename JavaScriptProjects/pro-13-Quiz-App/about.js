@@ -90,6 +90,8 @@ let crossIcon =
 
 function optionSelected(answer) {
   clearInterval(counter);
+  clearInterval(counterLine);
+
   const option_list = document.querySelector(".myOptions");
   let userAns = answer.textContent;
   let correctAns = questionsList[que_count].answer;
