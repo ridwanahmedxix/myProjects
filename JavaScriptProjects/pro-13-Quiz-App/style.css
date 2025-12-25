@@ -291,6 +291,7 @@ body {
   flex-direction: column;
   justify-content: center;
   transition: all 0.3s ease;
+  opacity: 1;
 }
 .ResultImg img {
   width: 100%;
