@@ -248,6 +248,7 @@ body {
   position: absolute;
   bottom: 0px;
   right: 0px;
+  display: none;
 }
 .nextBtn:hover {
   background-color: rgb(38, 218, 218);
