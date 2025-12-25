@@ -69,6 +69,12 @@ function showQuestions(index) {
   }
 }
 
+let tickIcon =
+  '  <div class="tick icon"><i class="fa-solid fa-circle-check"></i></div> ';
+
+let crossIcon =
+  '    <div class="cross icon"><i class="fa-solid fa-circle-xmark"></i></div>';
+
 function optionSelected(answer) {
   const option_list = document.querySelector(".myOptions");
   let userAns = answer.textContent;
@@ -77,13 +83,16 @@ function optionSelected(answer) {
   if (userAns == correctAns) {
     answer.classList.add("correct");
     console.log("right");
+    answer.insertAdjacentHTML("beforeend", tickIcon);
   } else {
     answer.classList.add("Incorrect");
     console.log("wrong ans");
+    answer.insertAdjacentHTML("beforeend", crossIcon);
 
     for (let i = 0; i < allOptions; i++) {
       if (option_list.children[i].textContent == correctAns) {
         option_list.children[i].setAttribute("class", "options correct");
+        option_list.children[i].insertAdjacentHTML("beforeend", tickIcon);
       }
     }
   }
