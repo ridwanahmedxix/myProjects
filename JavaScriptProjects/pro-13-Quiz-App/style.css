@@ -298,3 +298,50 @@ body {
   height: 170px;
   margin-bottom: 180px;
 }
+.complete_text {
+  font-size: 20px;
+  font-weight: 500;
+}
+.score_text span {
+  display: flex;
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+.score_text span p {
+  padding: 0px 4px;
+  font-weight: 600;
+}
+
+.buttonsLast {
+  display: flex;
+  margin: 20px 0;
+}
+.buttonsLast button {
+  margin: 0px 10px;
+  height: 45px;
+  padding: 0px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+.restart1 {
+  background-color: rgb(38, 192, 38);
+  color: #fff;
+  transition: 0.4s ease;
+}
+.restart1:hover {
+  background-color: rgb(30, 141, 30);
+}
+.quit {
+  background-color: rgb(27, 222, 222);
+  color: #fff;
+  transition: 0.4s ease;
+}
+.quit:hover {
+  background-color: rgb(21, 145, 145);
+}
