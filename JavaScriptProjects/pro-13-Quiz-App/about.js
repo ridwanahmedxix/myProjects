@@ -3,6 +3,7 @@ const rulesBox = document.querySelector(".rulesBox");
 const exitBtn = document.querySelector(".exitBtn");
 const questions = document.querySelector(".questions");
 const contiBtn = document.querySelector(".contiBtn");
+const timeCount = document.querySelector(".timeCount .timeSeconds ");
 
 myBtn.onclick = () => {
   rulesBox.classList.add("activeInfo");
@@ -16,16 +17,21 @@ contiBtn.onclick = () => {
   rulesBox.classList.remove("activeInfo");
   questions.classList.add("activeQuiz");
   showQuestions(0);
+  startTimer(15);
 };
 
 const nextBtn = document.querySelector(".nextBtn");
 
 let que_count = 0;
+let counter;
+let timeValue = 15;
 
 nextBtn.onclick = () => {
   if (que_count < questionsList.length - 1) {
     que_count++;
     showQuestions(que_count);
+    clearInterval(counter);
+    startTimer(timeValue);
   } else {
     console.log("You Have Completd Your Task");
   }
@@ -99,5 +105,13 @@ function optionSelected(answer) {
 
   for (let i = 0; i < allOptions; i++) {
     option_list.children[i].classList.add("disabled");
+  }
+}
+
+function startTimer(time) {
+  counter = setInterval(timer, 1000);
+  function timer() {
+    timeCount.textContent = time;
+    time--;
   }
 }
