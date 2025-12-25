@@ -234,7 +234,7 @@ body {
   padding-left: 30px;
 }
 .nextBtn {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   padding: 13px 25px;
   outline: none;
@@ -245,7 +245,9 @@ body {
   cursor: pointer;
   color: #f1f1f1;
   transition: all 0.3s ease;
-  margin-top: 21px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
 }
 .nextBtn:hover {
   background-color: rgb(38, 218, 218);
