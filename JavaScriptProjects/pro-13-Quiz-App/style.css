@@ -227,11 +227,14 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
 }
 .total_que {
   padding-bottom: 10px;
   padding-left: 30px;
+  position: absolute;
+  bottom: 15px;
+  left: 10px;
 }
 .nextBtn {
   font-size: 25px;
@@ -343,4 +346,11 @@ body {
 }
 .quit:hover {
   background-color: rgb(21, 145, 145);
+}
+
+.result_box.activeResult {
+  z-index: 5;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  pointer-events: auto;
 }

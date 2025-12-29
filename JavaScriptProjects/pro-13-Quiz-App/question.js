@@ -30,7 +30,7 @@ let questionsList = [
     answer: "CSS",
     options: ["HTML", "CSS", "JavaScript", "Python"],
   },
-  ,
+
   {
     numb: 5,
     question: "Which CSS property is used to change text color",

@@ -23,12 +23,40 @@ contiBtn.onclick = () => {
 };
 
 const nextBtn = document.querySelector(".nextBtn");
+const result_box = document.querySelector(".result_box");
+const restart_quiz = document.querySelector(".buttonsLast .restart1 ");
+const quit_quiz = document.querySelector(".buttonsLast .quit ");
+
+restart_quiz.onclick = () => {
+  result_box.classList.remove("activeResult");
+  questions.classList.add("activeQuiz");
+
+  que_count = 0;
+  userScore = 0;
+  timeValue = 15;
+  widthValue = 0;
+
+  showQuestions(que_count);
+
+  clearInterval(counter);
+  clearInterval(counterLine);
+
+  startTimer(timeValue);
+  startTimerLine(0);
+
+  nextBtn.style.display = "none";
+};
+
+quit_quiz.onclick = () => {
+  window.location.reload();
+};
 
 let que_count = 0;
 let counter;
 let timeValue = 15;
 let counterLine;
 let widthValue = 0;
+let userScore = 0;
 
 nextBtn.onclick = () => {
   if (que_count < questionsList.length - 1) {
@@ -42,6 +70,7 @@ nextBtn.onclick = () => {
     nextBtn.style.display = "none";
   } else {
     console.log("You Have Completd Your Task");
+    showResultBox();
   }
 };
 
@@ -98,6 +127,8 @@ function optionSelected(answer) {
   let correctAns = questionsList[que_count].answer;
   let allOptions = option_list.children.length;
   if (userAns == correctAns) {
+    userScore += 1;
+    console.log(userScore);
     answer.classList.add("correct");
     console.log("right");
     answer.insertAdjacentHTML("beforeend", tickIcon);
@@ -119,6 +150,42 @@ function optionSelected(answer) {
   }
 
   nextBtn.style.display = "block";
+}
+
+function showResultBox() {
+  rulesBox.classList.remove("activeInfo");
+  questions.classList.remove("activeQuiz");
+  result_box.classList.add("activeResult");
+  const scoreText = document.querySelector(".score_text");
+
+  if (userScore > 3) {
+    let scoreTag =
+      "  <span> Congratulation On You Got <p> " +
+      userScore +
+      " </p> Out Of <p> " +
+      questionsList.length +
+      "  </p> </span> ";
+
+    scoreText.innerHTML = scoreTag;
+  } else if (userScore > 1) {
+    let scoreTag =
+      "  <span> Carry On You Got <p> " +
+      userScore +
+      " </p> Out Of <p> " +
+      questionsList.length +
+      "  </p> </span> ";
+
+    scoreText.innerHTML = scoreTag;
+  } else {
+    let scoreTag =
+      "  <span> I Am Sorry You Got <p> " +
+      userScore +
+      " </p> Out Of <p> " +
+      questionsList.length +
+      "  </p> </span> ";
+
+    scoreText.innerHTML = scoreTag;
+  }
 }
 
 function startTimer(time) {
