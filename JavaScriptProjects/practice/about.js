@@ -1,10 +1,15 @@
 const display = document.getElementById("display");
-const UserInput = document.getElementById("UserInput");
-const clickMe = document.getElementById("clickMe");
 
-clickMe.addEventListener("click", () => {
-  let inputValue = UserInput.value;
-  display.textContent = inputValue;
-  UserInput.value = "";
-  clearBtn.style.display = "block";
-});
+function appendText(input) {
+  display.value = display.value + input;
+}
+function clearBtn() {
+  display.value = "";
+}
+function calculation() {
+  try {
+    display.value = eval(display.value);
+  } catch {
+    display.value = "Error";
+  }
+}

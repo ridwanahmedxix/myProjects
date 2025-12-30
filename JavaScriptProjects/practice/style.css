@@ -4,3 +4,8 @@ body {
   align-items: center;
   height: 100vh;
 }
+
+#allbtn {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
