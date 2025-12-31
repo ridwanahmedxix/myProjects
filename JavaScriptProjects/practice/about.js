@@ -4,7 +4,7 @@ const addBtn = document.getElementById("addBtn");
 
 addBtn.addEventListener("click", () => {
   let inputValue = userInput.value;
-  userInput.value = " ";
+  userInput.value = "";
   const li = document.createElement("li");
   li.textContent = inputValue;
   display.append(li);
