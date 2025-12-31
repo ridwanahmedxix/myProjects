@@ -3,33 +3,32 @@ const userInput = document.getElementById("userInput");
 const addBtn = document.getElementById("addBtn");
 
 addBtn.addEventListener("click", () => {
-  const inputValue = userInput.value.trim();
+  let inputValue = userInput.value.trim();
 
-  // empty check
   if (inputValue === "") {
-    alert("Wrong");
+    // এখানে alert() এর বদলে Swal.fire ব্যবহার করুন
+    Swal.fire({
+      title: "Error!",
+      text: "Wrong input! Please write something.",
+      icon: "error",
+      confirmButtonText: "OK",
+      confirmButtonColor: "#3085d6", // আপনি চাইলে বাটনের কালারও দিতে পারেন
+    });
     return;
   }
 
-  // create li
+  userInput.value = "";
   const li = document.createElement("li");
-  li.textContent = inputValue + " ";
+  li.textContent = inputValue;
+  display.append(li);
 
-  // create delete button
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "Delete";
+  deleteBtn.style.marginLeft = "10px"; // একটু গ্যাপ দেওয়ার জন্য
 
-  // delete functionality
   deleteBtn.addEventListener("click", () => {
     li.remove();
   });
 
-  // append delete button inside li
   li.append(deleteBtn);
-
-  // append li to list
-  display.append(li);
-
-  // clear input
-  userInput.value = "";
 });
