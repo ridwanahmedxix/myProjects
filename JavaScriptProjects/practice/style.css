@@ -4,8 +4,3 @@ body {
   align-items: center;
   height: 100vh;
 }
-.delete_Button {
-  padding: 20px 30px;
-  margin: 20px;
-  background-color: aqua;
-}
