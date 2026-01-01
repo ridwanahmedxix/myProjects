@@ -21,7 +21,7 @@ countBtn.addEventListener("click", () => {
         count++;
       }
     }
-
+    reloadBtn.style.display = "block";
     outPut.textContent = `The number of vowel ${count}`;
   }
 });
