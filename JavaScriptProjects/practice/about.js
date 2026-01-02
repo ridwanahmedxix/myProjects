@@ -10,4 +10,13 @@ addBtn.addEventListener("click", () => {
 
   li.textContent = inputValue;
   display.append(li);
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.textContent = "Delete";
+
+  deleteBtn.addEventListener("click", () => {
+    li.remove();
+  });
+
+  li.append(deleteBtn);
 });
