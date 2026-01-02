@@ -6,6 +6,11 @@ addBtn.addEventListener("click", () => {
   let inputValue = userInput.value;
   userInput.value = "";
 
+  if (inputValue === "") {
+    alert("Please Write Something");
+    return;
+  }
+
   const li = document.createElement("li");
 
   li.textContent = inputValue;
