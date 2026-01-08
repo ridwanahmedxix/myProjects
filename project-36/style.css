@@ -38,7 +38,7 @@ nav a:hover {
   right: 0;
   width: 250px;
   height: 100vh;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
@@ -49,4 +49,28 @@ nav a:hover {
 }
 .sideBar a {
   width: 100;
+}
+.MenuBar {
+  display: none;
+}
+
+/* Mobile devices */
+@media only screen and (max-width: 767px) {
+  .MenuBar {
+    display: block;
+  }
+  .hideMenu {
+    display: none;
+  }
+}
+
+/* Tablets / Medium devices */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .MenuBar {
+    display: block;
+  }
+
+  .hideMenu {
+    display: none;
+  }
 }

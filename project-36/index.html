@@ -10,7 +10,14 @@
   <body>
     <nav>
       <ul class="sideBar">
-        <li><a href="#"> Dream House </a></li>
+        <li onclick="closeSideBar()">
+          <a href="#">
+            <img
+              src="photo/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </a>
+        </li>
         <li><a href="#"> Home </a></li>
         <li><a href="#"> About </a></li>
         <li><a href="#"> Location </a></li>
@@ -22,11 +29,19 @@
     <nav>
       <ul>
         <li><a href="#"> Dream House </a></li>
-        <li><a href="#"> Home </a></li>
-        <li><a href="#"> About </a></li>
-        <li><a href="#"> Location </a></li>
-        <li><a href="#"> Blog </a></li>
-        <li><a href="#"> Contact </a></li>
+        <li class="hideMenu"><a href="#"> Home </a></li>
+        <li class="hideMenu"><a href="#"> About </a></li>
+        <li class="hideMenu"><a href="#"> Location </a></li>
+        <li class="hideMenu"><a href="#"> Blog </a></li>
+        <li class="hideMenu"><a href="#"> Contact </a></li>
+        <li onclick="ShowMenubar()" class="MenuBar">
+          <a href="#">
+            <img
+              src="photo/menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
+              alt=""
+            />
+          </a>
+        </li>
       </ul>
     </nav>
 
