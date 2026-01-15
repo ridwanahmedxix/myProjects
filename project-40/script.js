@@ -1,11 +1,13 @@
-const display = document.getElementById("display");
-const userInput = document.getElementById("userInput");
-const addBtn = document.getElementById("addBtn");
+const h1 = document.querySelector("h1");
+const increase = document.querySelector("#in");
+const decrease = document.querySelector("#de");
 
-addBtn.addEventListener("click", () => {
-  let userInputValue = userInput.value;
-  userInput.value = "";
-  const li = document.createElement("li");
-  li.textContent = userInputValue;
-  display.append(li);
+increase.addEventListener("click", () => {
+  const value = parseInt(h1.innerHTML);
+  h1.innerHTML = value + 1;
+});
+
+decrease.addEventListener("click", () => {
+  const value = parseInt(h1.innerHTML);
+  h1.innerHTML = value - 1;
 });
