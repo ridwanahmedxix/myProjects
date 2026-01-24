@@ -42,7 +42,7 @@ nav ul li a {
   align-items: center;
 }
 nav ul li a:hover {
-  background-color: rgb(14, 186, 186);
+  background-color: #d4bbeb;
 }
 
 /* SIDEBAR CODE -  */
@@ -57,7 +57,7 @@ nav ul li a:hover {
   width: 250px;
   height: 100vh;
   z-index: 999;
-  background: linear-gradient(to right, #dabdf1, #c1c9f3, #fccbee);
+  background: linear-gradient(to right, #e2d1f0, #e6e9f8, #f5e3f0);
 }
 .sideBar li {
   width: 100%;
