@@ -3,3 +3,19 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+nav {
+  background-color: aqua;
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
