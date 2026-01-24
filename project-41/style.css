@@ -54,3 +54,36 @@ nav ul li a:hover {
 .sideBar a {
   width: 100%;
 }
+
+#openSideBar {
+  display: none;
+}
+
+.menuHide {
+  display: block;
+}
+
+/* RESPONSIVE CODE START  */
+
+/* All Mobile Devices */
+@media (max-width: 767px) {
+  #openSideBar {
+    display: block;
+  }
+  .sideBar {
+    width: 100%;
+  }
+  .menuHide {
+    display: none;
+  }
+}
+
+/* All Tablet Devices */
+@media (min-width: 768px) and (max-width: 1024px) {
+  #openSideBar {
+    display: block;
+  }
+  .menuHide {
+    display: none;
+  }
+}
