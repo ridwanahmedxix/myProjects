@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+/* BODY CODE  */
+
+body {
+  background: linear-gradient(to right, #e2d1f0, #e6e9f8, #f5e3f0);
+}
+
+/* NAVBAR CODE START  */
+
 nav {
   background-color: aqua;
 }
@@ -67,6 +75,8 @@ nav ul li a:hover {
 
 /* All Mobile Devices */
 @media (max-width: 767px) {
+  /* NAVBAR RESPONSIVE CODE START  */
+
   #openSideBar {
     display: block;
   }
@@ -76,14 +86,19 @@ nav ul li a:hover {
   .menuHide {
     display: none;
   }
+  /* NAVBAR RESPONSIVE CODE END  */
 }
 
 /* All Tablet Devices */
 @media (min-width: 768px) and (max-width: 1024px) {
+  /* NAVBAR RESPONSIVE CODE START  */
+
   #openSideBar {
     display: block;
   }
   .menuHide {
     display: none;
   }
+
+  /* NAVBAR RESPONSIVE CODE END  */
 }
