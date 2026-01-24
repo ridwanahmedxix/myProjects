@@ -8,12 +8,15 @@
 
 body {
   background: linear-gradient(to right, #e2d1f0, #e6e9f8, #f5e3f0);
+  height: 100vh;
+  background-size: cover;
 }
 
 /* NAVBAR CODE START  */
 
 nav {
-  background-color: aqua;
+  background: linear-gradient(to right, #e2d1f0, #e6e9f8, #f5e3f0);
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 nav ul {
   display: flex;
@@ -54,7 +57,7 @@ nav ul li a:hover {
   width: 250px;
   height: 100vh;
   z-index: 999;
-  background-color: cornflowerblue;
+  background: linear-gradient(to right, #dabdf1, #c1c9f3, #fccbee);
 }
 .sideBar li {
   width: 100%;
