@@ -39,7 +39,7 @@ nav ul li a:hover {
   position: fixed;
   top: 0;
   right: 0;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
