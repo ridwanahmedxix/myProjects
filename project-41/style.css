@@ -74,6 +74,33 @@ nav ul li a:hover {
   display: block;
 }
 
+/* SECTION - 1 CODE START  */
+#section1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+.titleMain {
+  padding: 30px 0px;
+  font-size: 60px;
+  font-weight: 600;
+  text-align: center;
+}
+.teachersList h3 {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+.teachersList ul {
+  list-style-position: inside;
+}
+.teachersList ul li {
+  font-size: 19px;
+  margin: 8px 0px;
+}
+
 /* RESPONSIVE CODE START  */
 
 /* All Mobile Devices */
@@ -89,7 +116,13 @@ nav ul li a:hover {
   .menuHide {
     display: none;
   }
-  /* NAVBAR RESPONSIVE CODE END  */
+  /* SECTION - 1 CODE START  */
+  .titleMain {
+    font-size: 40px;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 /* All Tablet Devices */
@@ -102,6 +135,8 @@ nav ul li a:hover {
   .menuHide {
     display: none;
   }
-
-  /* NAVBAR RESPONSIVE CODE END  */
+  /* SECTION - 1 CODE START  */
+  .titleMain {
+    font-size: 50px;
+  }
 }
