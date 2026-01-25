@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -8,10 +8,21 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <ul id="display"></ul>
-    <input id="userInpu" type="text" />
-    <button id="addBtn">ADD</button>
-
+    <div class="heading">
+      <h1>GeeksForGeeks</h1>
+    </div>
+    <h2>How to create Popup Box using HTML,CSS and JS</h2>
+    <p id="sub-p">Click below button for Popup</p>
+    <div class="outer">
+      <div class="popup">
+        <i class="far fa-check-circle"></i>
+        <h2>You have Subscribed</h2>
+        <br />
+        <button id="closebtn">Close</button>
+      </div>
+      <button id="showbtn">Popup</button>
+    </div>
+    <br />
     <script src="about.js"></script>
   </body>
 </html>
