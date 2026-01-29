@@ -23,4 +23,7 @@ body {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  position: fixed;
+  top: 30%;
+  right: 50%;
 }
