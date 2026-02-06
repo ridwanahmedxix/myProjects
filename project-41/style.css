@@ -92,6 +92,7 @@ nav ul li a:hover {
 }
 .parentSec2 img {
   width: 100%;
+  border-radius: 30px 70px;
 }
 .paraSec1 {
   max-width: 500px;
@@ -159,11 +160,18 @@ nav ul li a:hover {
     display: none;
   }
   /* SECTION - 1 CODE START  */
+
+  #section1 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    padding: 0px 30px;
+  }
+
   .titleMain {
     font-size: 40px;
     font-weight: 500;
-    padding-left: 20px;
-    padding-right: 20px;
   }
 }
 
