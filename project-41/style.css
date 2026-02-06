@@ -193,7 +193,26 @@ nav ul li a:hover {
     display: none;
   }
   /* SECTION - 1 CODE START  */
+
+  #section1 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px;
+    padding: 0px 50px;
+  }
+
+  .parentSec2 {
+    margin-top: 40px;
+  }
+  .parentSec2 img {
+    border-radius: 20px 40px;
+  }
+
   .titleMain {
     font-size: 50px;
+  }
+  #SearchCourseBtn {
+    margin: 10px 0px;
   }
 }
