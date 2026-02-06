@@ -93,6 +93,12 @@ nav ul li a:hover {
 .parentSec2 img {
   width: 100%;
 }
+.paraSec1 {
+  max-width: 500px;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 19px;
+}
 
 /* RESPONSIVE CODE START  */
 
