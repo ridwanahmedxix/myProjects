@@ -2,10 +2,17 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>For Nusu 💖</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <title>For My Nusu 💖</title>
 
     <style>
+      /* ===================== */
+      /* GLOBAL RESET */
+      /* ===================== */
+
       * {
         margin: 0;
         padding: 0;
@@ -14,231 +21,279 @@
       }
 
       body {
+        background: linear-gradient(135deg, #ff4e8a, #ff9ecf);
+        overflow: hidden;
         height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(135deg, #ff4e8a, #ff7eb3, #ff9a9e);
+      }
+
+      /* ===================== */
+      /* APP WRAPPER */
+      /* ===================== */
+
+      .app {
+        width: 100%;
+        max-width: 430px;
+        height: 100vh;
+        margin: auto;
+        position: relative;
         overflow: hidden;
         color: white;
       }
 
-      /* Main Card */
-      .card {
-        width: 92%;
-        max-width: 420px;
-        height: 520px;
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(20px);
-        border-radius: 25px;
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
-        padding: 25px;
-        text-align: center;
-        position: relative;
-        overflow: hidden;
-      }
+      /* ===================== */
+      /* PROGRESS BAR */
+      /* ===================== */
 
-      /* Step System */
-      .step {
-        display: none;
-        animation: fade 0.6s ease;
-      }
-
-      .active {
-        display: block;
-      }
-
-      @keyframes fade {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* CLEAR CLICK BUTTON */
-      .action-btn {
-        margin-top: 25px;
-        padding: 14px 30px;
-        border: none;
-        border-radius: 50px;
-        background: white;
-        color: #ff2e63;
-        font-size: 16px;
-        cursor: pointer;
-        position: relative;
-        animation: pulse 1.5s infinite;
-      }
-
-      @keyframes pulse {
-        0% {
-          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
-        }
-        70% {
-          box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
-        }
-        100% {
-          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
-        }
-      }
-
-      .action-btn:active {
-        transform: scale(0.95);
-      }
-
-      /* Arrow Hint */
-      .hint {
-        margin-top: 10px;
-        font-size: 14px;
-        animation: bounce 1s infinite;
-      }
-
-      @keyframes bounce {
-        0%,
-        100% {
-          transform: translateY(0);
-        }
-        50% {
-          transform: translateY(8px);
-        }
-      }
-
-      /* Envelope */
-      .envelope {
-        margin: 30px auto;
-        width: 240px;
-        height: 150px;
-        background: white;
-        border-radius: 12px;
-        position: relative;
-        cursor: pointer;
-        animation: pulse 1.5s infinite;
-      }
-
-      .envelope:before {
-        content: "";
+      .progress {
         position: absolute;
         top: 0;
         left: 0;
+        height: 4px;
+        width: 0%;
+        background: white;
+        transition: 0.6s;
+      }
+
+      /* ===================== */
+      /* SCREENS */
+      /* ===================== */
+
+      .screen {
+        position: absolute;
         width: 100%;
         height: 100%;
-        background: #ff2e63;
-        clip-path: polygon(0 0, 50% 60%, 100% 0);
+        padding: 40px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        opacity: 0;
+        transform: translateX(100%);
         transition: 1s;
       }
 
-      .envelope.open:before {
-        transform: rotateX(180deg);
+      .screen.active {
+        opacity: 1;
+        transform: translateX(0);
       }
 
-      /* Letter */
-      .letter {
-        margin-top: 20px;
-        font-size: 15px;
-        line-height: 1.6;
-        min-height: 120px;
+      /* ===================== */
+      /* BUTTON */
+      /* ===================== */
+
+      .btn {
+        margin-top: 30px;
+        padding: 14px 28px;
+        border-radius: 30px;
+        border: none;
+        font-weight: bold;
+        background: white;
+        color: #ff4e8a;
+        cursor: pointer;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
       }
 
-      /* Floating Hearts */
+      .btn:active {
+        transform: scale(0.95);
+      }
+
+      /* ===================== */
+      /* IMAGE STYLE */
+      /* ===================== */
+
+      .photo {
+        width: 85%;
+        max-width: 320px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin: 20px 0;
+        transform: scale(0.8);
+        opacity: 0;
+        transition: 1s;
+      }
+
+      .photo img {
+        width: 100%;
+        display: block;
+      }
+
+      .photo.show {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      /* ===================== */
+      /* TYPEWRITER */
+      /* ===================== */
+
+      .type {
+        min-height: 80px;
+      }
+
+      /* ===================== */
+      /* FLOATING HEARTS */
+      /* ===================== */
+
       .heart {
         position: absolute;
-        font-size: 18px;
-        animation: float 5s linear infinite;
+        width: 15px;
+        height: 15px;
+        background: white;
+        transform: rotate(45deg);
+        animation: float 8s linear infinite;
+        opacity: 0.5;
+      }
+
+      .heart::before,
+      .heart::after {
+        content: "";
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: white;
+        border-radius: 50%;
+      }
+
+      .heart::before {
+        top: -7px;
+        left: 0;
+      }
+      .heart::after {
+        left: -7px;
+        top: 0;
       }
 
       @keyframes float {
         0% {
-          transform: translateY(100vh) scale(0);
+          transform: translateY(100vh) rotate(45deg);
         }
         100% {
-          transform: translateY(-10vh) scale(1);
+          transform: translateY(-10vh) rotate(45deg);
         }
       }
 
-      /* Responsive */
-      @media (max-width: 430px) {
-        .card {
-          height: 500px;
+      /* ===================== */
+      /* RESPONSIVE */
+      /* ===================== */
+
+      @media (max-width: 390px) {
+        h1 {
+          font-size: 22px;
+        }
+        p {
+          font-size: 14px;
         }
       }
     </style>
   </head>
-
   <body>
-    <div class="card">
-      <!-- STEP 1 -->
-      <div class="step active" id="step1">
-        <h2>💖 Hello Nusu 💖</h2>
-        <p>Mama has a special surprise for you 🎁💖✨</p>
-        <button class="action-btn" onclick="nextStep(2)">
-          Tap Here To Continue 💕
-        </button>
-        <div class="hint">⬆️ Tap The Glowing Button ⬆️</div>
+    <div class="app">
+      <div class="progress" id="progress"></div>
+
+      <!-- SCREEN 1 -->
+      <div class="screen active">
+        <h1>Happy Valentine's Day 💖</h1>
+        <p>For my sweetest little Mama</p>
+        <button class="btn" onclick="next()">Start</button>
       </div>
 
-      <!-- STEP 2 -->
-      <div class="step" id="step2">
-        <h2>💌 Open This Letter</h2>
-        <p>নিচের খামটাতে ট্যাপ করো 👇</p>
-        <div class="envelope" id="envelope" onclick="openLetter()"></div>
-        <div class="hint">⬆️ Tap The Glowing Envelope ⬆️</div>
-        <div class="letter" id="letter"></div>
+      <!-- SCREEN 2 -->
+      <div class="screen">
+        <h1>Her Name is...</h1>
+        <h2>Sharin Akter Nusrat 🌸</h2>
+        <p>But Mama calls her Nusu 💕</p>
+        <button class="btn" onclick="next()">Next</button>
+      </div>
+
+      <!-- SCREEN 3 (IMAGE) -->
+      <div class="screen">
+        <h1>This is Nusu 💖</h1>
+        <div class="photo" id="photo">
+          <img src="/photo/WhatsApp Image 2026-02-14 at 12.19.20 PM.jpeg" />
+        </div>
+        <button class="btn" onclick="next()">Reveal Message</button>
+      </div>
+
+      <!-- SCREEN 4 -->
+      <div class="screen">
+        <h1>Dear Nusu 💌</h1>
+        <p class="type" id="message"></p>
+        <button class="btn" onclick="next()">Final Words</button>
+      </div>
+
+      <!-- SCREEN 5 -->
+      <div class="screen">
+        <h1>From Your Mama 💖</h1>
+        <p>
+          Always read, learn, and stay curious. 📚 Knowledge is your superpower,
+          and mama will always guide you. Dream big, work hard, and shine
+          bright! ✨
+        </p>
+        <button class="btn" onclick="restart()">Replay</button>
       </div>
     </div>
 
     <script>
-      /* Step System */
-      function nextStep(step) {
-        document
-          .querySelectorAll(".step")
-          .forEach((s) => s.classList.remove("active"));
-        document.getElementById("step" + step).classList.add("active");
-      }
+      /* ===================== */
+      /* HEART GENERATOR */
+      /* ===================== */
 
-      /* Typing */
-      const text = `Dear Nusu 💕
-
-Study with focus and always try your best.
-Knowledge is your greatest strength.
-
-Be kind, be honest, and respect everyone.
-Listen to your parents and help others.
-
-Grow up to be a good human first —
-success will follow you naturally.
-
-Mama is always proud of you 💖✨`;
-
-      let i = 0;
-      function typeWriter() {
-        if (i < text.length) {
-          document.getElementById("letter").innerHTML += text.charAt(i);
-          i++;
-          setTimeout(typeWriter, 30);
-        }
-      }
-
-      /* Envelope */
-      function openLetter() {
-        document.getElementById("envelope").classList.add("open");
-        typeWriter();
-      }
-
-      /* Floating Hearts */
       function createHeart() {
         const heart = document.createElement("div");
         heart.classList.add("heart");
-        heart.innerHTML = "💖";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.fontSize = Math.random() * 20 + 15 + "px";
-        heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+        heart.style.left = Math.random() * 100 + "%";
         document.body.appendChild(heart);
-        setTimeout(() => heart.remove(), 5000);
+        setTimeout(() => heart.remove(), 8000);
       }
       setInterval(createHeart, 600);
+
+      /* ===================== */
+      /* SCREEN CONTROL */
+      /* ===================== */
+
+      let current = 0;
+      const screens = document.querySelectorAll(".screen");
+      const progress = document.getElementById("progress");
+
+      function next() {
+        screens[current].classList.remove("active");
+        current++;
+        screens[current].classList.add("active");
+        progress.style.width = (current / (screens.length - 1)) * 100 + "%";
+
+        if (current === 2) {
+          document.getElementById("photo").classList.add("show");
+        }
+
+        if (current === 3) {
+          typeWriter();
+        }
+      }
+
+      function restart() {
+        screens[current].classList.remove("active");
+        current = 0;
+        screens[current].classList.add("active");
+        progress.style.width = "0%";
+      }
+
+      /* ===================== */
+      /* TYPEWRITER EFFECT */
+      /* ===================== */
+
+      const text =
+        " Always be kind, stay curious, and follow your heart. Life will guide you, and mama will always be with you.";
+      let i = 0;
+
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("message").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 40);
+        }
+      }
     </script>
   </body>
 </html>
