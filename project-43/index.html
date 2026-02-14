@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For Nusu 💖</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", sans-serif;
+      }
+
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(135deg, #ff4e8a, #ff7eb3, #ff9a9e);
+        overflow: hidden;
+        color: white;
+      }
+
+      /* Main Card */
+      .card {
+        width: 92%;
+        max-width: 420px;
+        height: 520px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(20px);
+        border-radius: 25px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        padding: 25px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      /* Step System */
+      .step {
+        display: none;
+        animation: fade 0.6s ease;
+      }
+
+      .active {
+        display: block;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* CLEAR CLICK BUTTON */
+      .action-btn {
+        margin-top: 25px;
+        padding: 14px 30px;
+        border: none;
+        border-radius: 50px;
+        background: white;
+        color: #ff2e63;
+        font-size: 16px;
+        cursor: pointer;
+        position: relative;
+        animation: pulse 1.5s infinite;
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+        }
+      }
+
+      .action-btn:active {
+        transform: scale(0.95);
+      }
+
+      /* Arrow Hint */
+      .hint {
+        margin-top: 10px;
+        font-size: 14px;
+        animation: bounce 1s infinite;
+      }
+
+      @keyframes bounce {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(8px);
+        }
+      }
+
+      /* Envelope */
+      .envelope {
+        margin: 30px auto;
+        width: 240px;
+        height: 150px;
+        background: white;
+        border-radius: 12px;
+        position: relative;
+        cursor: pointer;
+        animation: pulse 1.5s infinite;
+      }
+
+      .envelope:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ff2e63;
+        clip-path: polygon(0 0, 50% 60%, 100% 0);
+        transition: 1s;
+      }
+
+      .envelope.open:before {
+        transform: rotateX(180deg);
+      }
+
+      /* Letter */
+      .letter {
+        margin-top: 20px;
+        font-size: 15px;
+        line-height: 1.6;
+        min-height: 120px;
+      }
+
+      /* Floating Hearts */
+      .heart {
+        position: absolute;
+        font-size: 18px;
+        animation: float 5s linear infinite;
+      }
+
+      @keyframes float {
+        0% {
+          transform: translateY(100vh) scale(0);
+        }
+        100% {
+          transform: translateY(-10vh) scale(1);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 430px) {
+        .card {
+          height: 500px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="card">
+      <!-- STEP 1 -->
+      <div class="step active" id="step1">
+        <h2>💖 Hello Nusu 💖</h2>
+        <p>Mama has a special surprise for you 🎁💖✨</p>
+        <button class="action-btn" onclick="nextStep(2)">
+          Tap Here To Continue 💕
+        </button>
+        <div class="hint">⬆️ Tap The Glowing Button ⬆️</div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step" id="step2">
+        <h2>💌 Open This Letter</h2>
+        <p>নিচের খামটাতে ট্যাপ করো 👇</p>
+        <div class="envelope" id="envelope" onclick="openLetter()"></div>
+        <div class="hint">⬆️ Tap The Glowing Envelope ⬆️</div>
+        <div class="letter" id="letter"></div>
+      </div>
+    </div>
+
+    <script>
+      /* Step System */
+      function nextStep(step) {
+        document
+          .querySelectorAll(".step")
+          .forEach((s) => s.classList.remove("active"));
+        document.getElementById("step" + step).classList.add("active");
+      }
+
+      /* Typing */
+      const text = `Dear Nusu 💕
+
+Study with focus and always try your best.
+Knowledge is your greatest strength.
+
+Be kind, be honest, and respect everyone.
+Listen to your parents and help others.
+
+Grow up to be a good human first —
+success will follow you naturally.
+
+Mama is always proud of you 💖✨`;
+
+      let i = 0;
+      function typeWriter() {
+        if (i < text.length) {
+          document.getElementById("letter").innerHTML += text.charAt(i);
+          i++;
+          setTimeout(typeWriter, 30);
+        }
+      }
+
+      /* Envelope */
+      function openLetter() {
+        document.getElementById("envelope").classList.add("open");
+        typeWriter();
+      }
+
+      /* Floating Hearts */
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "💖";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = Math.random() * 20 + 15 + "px";
+        heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 5000);
+      }
+      setInterval(createHeart, 600);
+    </script>
+  </body>
+</html>
