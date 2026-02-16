@@ -1,0 +1,161 @@
+:root {
+  --primary: #006a4e;
+  --secondary: #f42a41;
+  --bg: #f4f4f4;
+  --text: #111;
+}
+
+body.dark {
+  --bg: #121212;
+  --text: #fff;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Segoe UI,
+    sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5%;
+  background: linear-gradient(90deg, var(--primary), var(--secondary));
+  color: white;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+.nav-links a,
+.nav-links button {
+  color: white;
+  text-decoration: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+/* HERO */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(120deg, #006a4e, #f42a41);
+  color: white;
+  text-align: center;
+}
+.btn {
+  padding: 10px 20px;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  transform: scale(1.1);
+}
+
+/* SECTIONS */
+.section {
+  padding: 100px 10%;
+}
+form {
+  display: grid;
+  gap: 15px;
+}
+form input,
+form select,
+form textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* STATS */
+.stats-grid {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+/* REPORT CARDS */
+.report-card {
+  padding: 20px;
+  margin: 10px 0;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ADMIN PANEL CARDS */
+.admin-card {
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+/* SPINNER */
+.spinner {
+  display: none;
+  width: 15px;
+  height: 15px;
+  border: 3px solid white;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+  }
+  .hamburger {
+    display: block;
+  }
+}

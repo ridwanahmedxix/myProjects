@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stop Extortion Bangladesh</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+      <div class="logo">🛡️ Stop Extortion</div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#report">Report</a>
+        <a href="#stats">Statistics</a>
+        <a href="#publicReports">Reports</a>
+        <button id="themeToggle">🌙</button>
+      </nav>
+
+      <div class="hamburger" id="hamburger">☰</div>
+    </header>
+
+    <!-- ================= HERO ================= -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h1>Stand Against Extortion</h1>
+        <p>Your voice matters. Report safely and anonymously.</p>
+        <a href="#report" class="btn">Report Safely</a>
+      </div>
+    </section>
+
+    <!-- ================= REPORT FORM ================= -->
+    <section id="report" class="section">
+      <h2>Report an Incident</h2>
+
+      <form id="reportForm">
+        <input type="text" id="name" placeholder="Full Name (Optional)" />
+        <input type="email" id="email" placeholder="Email (Optional)" />
+
+        <select id="district">
+          <option value="">Select District</option>
+          <option>Dhaka</option>
+          <option>Chattogram</option>
+          <option>Rajshahi</option>
+          <option>Khulna</option>
+          <option>Sylhet</option>
+          <option>Barishal</option>
+          <option>Rangpur</option>
+          <option>Mymensingh</option>
+        </select>
+
+        <input type="text" id="location" placeholder="Location Details" />
+
+        <select id="type">
+          <option value="">Type of Extortion</option>
+          <option>Market</option>
+          <option>Transport</option>
+          <option>Political</option>
+          <option>Local Gang</option>
+          <option>Online</option>
+        </select>
+
+        <textarea
+          id="description"
+          placeholder="Incident Description"
+        ></textarea>
+
+        <label class="checkbox">
+          <input type="checkbox" id="truth" />
+          I confirm this information is truthful
+        </label>
+
+        <button type="submit" class="btn" id="submitBtn">
+          Submit Report
+          <span class="spinner" id="spinner"></span>
+        </button>
+      </form>
+    </section>
+
+    <!-- ================= STATS ================= -->
+    <section id="stats" class="section">
+      <h2>Live Statistics</h2>
+      <div class="stats-grid">
+        <div>
+          <h3 id="totalReports">0</h3>
+          <p>Total Reports</p>
+        </div>
+        <div>
+          <h3 id="underReview">0</h3>
+          <p>Under Review</p>
+        </div>
+        <div>
+          <h3 id="approved">0</h3>
+          <p>Approved</p>
+        </div>
+      </div>
+      <canvas id="chart" width="300" height="300"></canvas>
+    </section>
+
+    <!-- ================= PUBLIC REPORTS ================= -->
+    <section id="publicReports" class="section">
+      <h2>Approved Reports</h2>
+      <div id="reportList"></div>
+    </section>
+
+    <!-- ================= ADMIN PANEL ================= -->
+    <section id="adminPanel" class="section">
+      <h2>Admin Moderation Panel</h2>
+      <div id="adminReports"></div>
+    </section>
+
+    <!-- ================= MODAL ================= -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <p>Report submitted successfully and sent for moderation.</p>
+        <button onclick="closeModal()">Close</button>
+      </div>
+    </div>
+
+    <footer>© 2026 Stop Extortion Bangladesh</footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
