@@ -3,3 +3,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+.NavBar {
+  background-color: white;
+  box-shadow: 0.3 0.5 black;
+}
