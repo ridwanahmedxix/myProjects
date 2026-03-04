@@ -1,0 +1,9 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-rows: repeat(3, 1fr); */
+}
+.parent div {
+  border: 2px solid red;
+  margin: 10px;
+}
