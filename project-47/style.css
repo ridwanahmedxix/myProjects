@@ -20,21 +20,7 @@ body {
   font-weight: bold;
 }
 .inSearchp {
-  border: 2px solid rgb(34, 106, 231);
-  padding: 10px;
-}
-.inSearchp input {
-  border: none;
-  outline: none;
-}
-.inSearchp i {
-  padding: 10px 14px;
-}
-.blueBox {
-  background-color: rgb(34, 106, 231);
-}
-.blueBox i {
+  border: 2px solid blue;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
