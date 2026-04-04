@@ -20,7 +20,30 @@ body {
   font-weight: bold;
 }
 .inSearchp {
-  border: 2px solid blue;
   display: flex;
   align-items: center;
+}
+.blueBox {
+  background-color: rgb(46, 244, 244);
+  padding: 12px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.blueBox:hover {
+  background-color: rgb(40, 199, 199);
+  transition: 0.4s;
+}
+.blueBox i {
+  font-size: 20px;
+  color: white;
+}
+.inSear input {
+  border: 2px solid blue;
+  padding: 10px;
+  width: 250px;
+  border-radius: 3px;
+  font-size: 19px;
+}
+.inSear input::placeholder {
+  font-size: 19px;
 }
