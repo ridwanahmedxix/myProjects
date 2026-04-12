@@ -3,13 +3,120 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 46</title>
-    <!-- CSS LINK  -->
+    <title>GeoFinder AI</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <button class="addMe">Add Me</button>
+    <div class="background-glow"></div>
 
-    <script src="script.js"></script>
+    <nav class="navbar glass">
+      <div class="logo">
+        <i class="fa-solid fa-earth-americas"></i> GeoFinder AI
+      </div>
+      <ul class="menu">
+        <li><a href="#hero">Search</a></li>
+        <li><a href="#map-section">Map</a></li>
+        <li><a href="#image-upload">Vision</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <section id="hero">
+        <h1>Discover the World with AI</h1>
+        <p>
+          Search locations, ask geography questions, or upload an image to find
+          out where it is.
+        </p>
+
+        <div class="search-container glass">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+          <input
+            type="text"
+            id="search-input"
+            placeholder="e.g., Where is the Eiffel Tower?"
+          />
+          <button id="voice-btn" title="Voice Search">
+            <i class="fa-solid fa-microphone"></i>
+          </button>
+          <button id="search-btn">Ask AI</button>
+        </div>
+
+        <div class="recent-searches">
+          <span>Recent:</span>
+          <div id="history-tags"></div>
+        </div>
+      </section>
+
+      <section id="ai-chat" class="hidden">
+        <div class="chat-box glass">
+          <div class="user-query">
+            <i class="fa-solid fa-user"></i>
+            <p id="query-text">...</p>
+          </div>
+          <div class="ai-response">
+            <i class="fa-solid fa-robot"></i>
+            <div id="loading" class="hidden">
+              <div class="spinner"></div>
+              Generating response...
+            </div>
+            <div id="response-content">
+              <p id="answer-text"></p>
+              <button id="copy-btn" class="icon-btn">
+                <i class="fa-regular fa-copy"></i> Copy
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="map-section" class="glass hidden">
+        <div class="map-header">
+          <h2><i class="fa-solid fa-map-location-dot"></i> Location Details</h2>
+          <div id="location-info">
+            <h3 id="loc-name">...</h3>
+            <p id="loc-desc">...</p>
+          </div>
+        </div>
+        <div id="map"></div>
+      </section>
+
+      <section id="image-upload" class="glass">
+        <h2><i class="fa-solid fa-image"></i> Identify Place by Image</h2>
+        <p>Upload a photo of a landmark or landscape.</p>
+
+        <div class="upload-area" id="drop-zone">
+          <input type="file" id="file-input" accept="image/*" hidden />
+          <i class="fa-solid fa-cloud-arrow-up"></i>
+          <p>Click to upload or drag and drop</p>
+        </div>
+
+        <div id="image-preview-container" class="hidden">
+          <img id="image-preview" src="" alt="Preview" />
+          <div class="vision-result glass">
+            <h4>AI Vision Result:</h4>
+            <p id="vision-text">Analyzing...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="glass">
+      <p>&copy; 2026 GeoFinder AI. Built for exploration.</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
