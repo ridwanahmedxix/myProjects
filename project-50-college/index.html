@@ -1,0 +1,2947 @@
+<!doctype html>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>যাদুর চর মডেল ডিগ্রি কলেজ</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Exo+2:wght@300;400;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* ===== CSS VARIABLES ===== */
+      :root {
+        --primary: #6c3fdc;
+        --primary-dark: #4a1fa8;
+        --primary-light: #9b6ff5;
+        --secondary: #f7458a;
+        --secondary-light: #ff8c42;
+        --accent: #00d4ff;
+        --accent2: #43e97b;
+        --bg: #f3f0ff;
+        --bg2: #fff;
+        --dark: #0d0820;
+        --dark2: #180d40;
+        --text: #2d2050;
+        --text-light: #6b5a9e;
+        --card-bg: rgba(255, 255, 255, 0.85);
+        --shadow: 0 8px 40px rgba(108, 63, 220, 0.13);
+        --shadow-hover: 0 20px 60px rgba(108, 63, 220, 0.22);
+        --radius: 20px;
+        --radius-sm: 12px;
+        --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      /* ===== RESET ===== */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+      body {
+        font-family: "Hind Siliguri", sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        overflow-x: hidden;
+        line-height: 1.7;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+      ul {
+        list-style: none;
+      }
+      img {
+        max-width: 100%;
+      }
+      button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        font-family: inherit;
+      }
+
+      /* ===== SCROLLBAR ===== */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f0ecff;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--primary);
+        border-radius: 3px;
+      }
+
+      /* ===== UTILITY ===== */
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+      .section-tag {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #fff;
+        font-size: 0.78rem;
+        font-family: "Exo 2", sans-serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 6px 18px;
+        border-radius: 50px;
+        margin-bottom: 14px;
+      }
+      .section-title {
+        font-family: "Exo 2", sans-serif;
+        font-size: clamp(1.7rem, 4vw, 2.8rem);
+        font-weight: 800;
+        color: var(--text);
+        line-height: 1.2;
+        margin-bottom: 12px;
+      }
+      .section-title span {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .section-sub {
+        font-size: 1.05rem;
+        color: var(--text-light);
+        max-width: 560px;
+      }
+      .section-header {
+        text-align: center;
+        margin-bottom: 54px;
+      }
+      .section-header .section-sub {
+        margin: 0 auto;
+      }
+      section {
+        padding: 90px 0;
+      }
+
+      /* ===== BUTTONS ===== */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-size: 0.95rem;
+        font-weight: 700;
+        font-family: "Exo 2", sans-serif;
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+      .btn::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.18);
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.4s ease;
+      }
+      .btn:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+      .btn-primary {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #fff;
+        box-shadow: 0 8px 30px rgba(108, 63, 220, 0.35);
+      }
+      .btn-primary:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 40px rgba(108, 63, 220, 0.45);
+      }
+      .btn-outline {
+        background: transparent;
+        color: #fff;
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(8px);
+      }
+      .btn-outline:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-3px);
+      }
+
+      /* ===== RIPPLE ===== */
+      .ripple {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.4);
+        transform: scale(0);
+        animation: rippleAnim 0.6s linear;
+        pointer-events: none;
+      }
+      @keyframes rippleAnim {
+        to {
+          transform: scale(4);
+          opacity: 0;
+        }
+      }
+
+      /* ===== NAVBAR ===== */
+      #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        padding: 0 0;
+        transition: var(--transition);
+      }
+      #navbar.scrolled {
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(20px);
+        box-shadow: 0 4px 30px rgba(108, 63, 220, 0.12);
+      }
+      .nav-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+      }
+      .nav-logo {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .nav-logo .logo-icon {
+        width: 42px;
+        height: 42px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 900;
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 15px rgba(108, 63, 220, 0.35);
+      }
+      .nav-logo .logo-text {
+        font-family: "Exo 2", sans-serif;
+        font-weight: 800;
+        font-size: 1.05rem;
+        color: var(--text);
+        line-height: 1.2;
+      }
+      .nav-logo .logo-text span {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 500;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .nav-links a {
+        padding: 8px 16px;
+        border-radius: 8px;
+        font-weight: 600;
+        font-size: 0.92rem;
+        color: var(--text);
+        transition: var(--transition);
+      }
+      .nav-links a:hover {
+        background: rgba(108, 63, 220, 0.1);
+        color: var(--primary);
+      }
+      .nav-cta {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #fff !important;
+        padding: 9px 22px !important;
+        border-radius: 50px !important;
+        box-shadow: 0 4px 15px rgba(108, 63, 220, 0.3);
+      }
+      .nav-cta:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(108, 63, 220, 0.4) !important;
+      }
+      .hamburger {
+        display: none;
+        flex-direction: column;
+        gap: 5px;
+        background: none;
+        padding: 8px;
+        cursor: pointer;
+      }
+      .hamburger span {
+        display: block;
+        width: 24px;
+        height: 2.5px;
+        background: var(--text);
+        border-radius: 2px;
+        transition: var(--transition);
+      }
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(7.5px) rotate(45deg);
+      }
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-7.5px) rotate(-45deg);
+      }
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: rgba(255, 255, 255, 0.97);
+        backdrop-filter: blur(20px);
+        padding: 20px 24px;
+        box-shadow: 0 20px 60px rgba(108, 63, 220, 0.15);
+        flex-direction: column;
+        gap: 4px;
+        z-index: 998;
+      }
+      .mobile-menu.open {
+        display: flex;
+      }
+      .mobile-menu a {
+        padding: 12px 16px;
+        border-radius: 10px;
+        font-weight: 600;
+        color: var(--text);
+        transition: var(--transition);
+      }
+      .mobile-menu a:hover {
+        background: rgba(108, 63, 220, 0.08);
+        color: var(--primary);
+      }
+
+      /* ===== HERO ===== */
+      #hero {
+        min-height: 100vh;
+        background: linear-gradient(
+          135deg,
+          #0d0820 0%,
+          #1a0550 40%,
+          #2d0e6e 70%,
+          #1a0550 100%
+        );
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        padding: 120px 0 80px;
+      }
+      .hero-blobs {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+      }
+      .blob {
+        position: absolute;
+        border-radius: 50%;
+        filter: blur(60px);
+        opacity: 0.18;
+      }
+      .blob-1 {
+        width: 500px;
+        height: 500px;
+        background: var(--primary);
+        top: -100px;
+        right: -100px;
+        animation: blobFloat 8s ease-in-out infinite;
+      }
+      .blob-2 {
+        width: 400px;
+        height: 400px;
+        background: var(--secondary);
+        bottom: -80px;
+        left: -80px;
+        animation: blobFloat 10s ease-in-out infinite reverse;
+      }
+      .blob-3 {
+        width: 300px;
+        height: 300px;
+        background: var(--accent);
+        top: 40%;
+        right: 30%;
+        animation: blobFloat 12s ease-in-out infinite 2s;
+      }
+      @keyframes blobFloat {
+        0%,
+        100% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(30px, -20px) scale(1.08);
+        }
+      }
+
+      .hero-shapes {
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        overflow: hidden;
+      }
+      .shape {
+        position: absolute;
+        opacity: 0.12;
+      }
+      .shape-ring {
+        width: 200px;
+        height: 200px;
+        border: 3px solid var(--accent);
+        border-radius: 50%;
+        top: 15%;
+        right: 8%;
+        animation: spin 18s linear infinite;
+      }
+      .shape-ring2 {
+        width: 120px;
+        height: 120px;
+        border: 2px solid var(--secondary);
+        border-radius: 50%;
+        bottom: 20%;
+        right: 20%;
+        animation: spin 12s linear infinite reverse;
+      }
+      .shape-dot {
+        width: 80px;
+        height: 80px;
+        background: var(--primary-light);
+        border-radius: 50%;
+        top: 60%;
+        left: 5%;
+        animation: blobFloat 6s ease-in-out infinite;
+      }
+      .shape-sq {
+        width: 60px;
+        height: 60px;
+        background: var(--secondary-light);
+        transform: rotate(30deg);
+        top: 25%;
+        left: 10%;
+        animation: blobFloat 9s ease-in-out infinite 1s;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 8px 18px;
+        border-radius: 50px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        margin-bottom: 22px;
+        color: var(--accent);
+      }
+      .hero-badge::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: var(--accent);
+        border-radius: 50%;
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 0.5;
+          transform: scale(1.3);
+        }
+      }
+      .hero-title {
+        font-family: "Exo 2", sans-serif;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        font-weight: 900;
+        line-height: 1.1;
+        margin-bottom: 16px;
+      }
+      .hero-title .grad {
+        background: linear-gradient(
+          135deg,
+          var(--accent),
+          var(--primary-light),
+          var(--secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-sub {
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 10px;
+      }
+      .hero-desc {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-bottom: 34px;
+        line-height: 1.8;
+      }
+      .hero-btns {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+      }
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        margin-top: 40px;
+      }
+      .hero-stat {
+        background: rgba(255, 255, 255, 0.07);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-radius: 14px;
+        padding: 16px;
+        text-align: center;
+      }
+      .hero-stat .num {
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.6rem;
+        font-weight: 800;
+        background: linear-gradient(
+          135deg,
+          var(--accent),
+          var(--primary-light)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .hero-stat .label {
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.6);
+        margin-top: 2px;
+      }
+
+      .hero-visual {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .hero-card-float {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 24px;
+        padding: 36px;
+        width: 100%;
+        max-width: 380px;
+        animation: cardFloat 5s ease-in-out infinite;
+      }
+      @keyframes cardFloat {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-14px);
+        }
+      }
+      .card-float-header {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+      .card-float-icon {
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+      }
+      .card-float-title {
+        font-family: "Exo 2", sans-serif;
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: #fff;
+      }
+      .card-float-sub {
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .card-float-items {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .cfi {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        background: rgba(255, 255, 255, 0.06);
+        border-radius: 10px;
+        padding: 10px 14px;
+      }
+      .cfi-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        flex-shrink: 0;
+      }
+      .cfi-dot.purple {
+        background: var(--primary-light);
+      }
+      .cfi-dot.pink {
+        background: var(--secondary);
+      }
+      .cfi-dot.cyan {
+        background: var(--accent);
+      }
+      .cfi span {
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.85);
+        font-weight: 500;
+      }
+      .cfi .bar {
+        margin-left: auto;
+        height: 4px;
+        border-radius: 2px;
+        background: rgba(255, 255, 255, 0.15);
+        position: relative;
+        min-width: 60px;
+      }
+      .cfi .bar::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, var(--accent), var(--primary-light));
+        border-radius: 2px;
+      }
+      .cfi:nth-child(1) .bar::after {
+        width: 85%;
+      }
+      .cfi:nth-child(2) .bar::after {
+        width: 70%;
+      }
+      .cfi:nth-child(3) .bar::after {
+        width: 90%;
+      }
+
+      /* Floating mini cards */
+      .mini-float {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(15px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 14px;
+        padding: 12px 16px;
+        font-size: 0.8rem;
+        color: #fff;
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      .mf1 {
+        top: -20px;
+        left: -30px;
+        animation: cardFloat 4s ease-in-out infinite 1s;
+      }
+      .mf2 {
+        bottom: -10px;
+        right: -20px;
+        animation: cardFloat 6s ease-in-out infinite 0.5s;
+      }
+
+      /* ===== INFO CARDS ===== */
+      #info {
+        padding: 60px 0;
+        background: #fff;
+      }
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      .info-card {
+        background: var(--card-bg);
+        border-radius: var(--radius);
+        padding: 28px 22px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: 1px solid rgba(108, 63, 220, 0.08);
+        position: relative;
+        overflow: hidden;
+      }
+      .info-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: var(
+          --grad,
+          linear-gradient(135deg, var(--primary), var(--secondary))
+        );
+      }
+      .info-card:hover {
+        transform: translateY(-8px);
+        box-shadow: var(--shadow-hover);
+      }
+      .info-card-icon {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 14px;
+        background: var(
+          --grad,
+          linear-gradient(135deg, var(--primary), var(--secondary))
+        );
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+      }
+      .info-card-num {
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.7rem;
+        font-weight: 800;
+        background: var(
+          --grad,
+          linear-gradient(135deg, var(--primary), var(--secondary))
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        margin-bottom: 4px;
+      }
+      .info-card-label {
+        font-size: 0.85rem;
+        color: var(--text-light);
+        font-weight: 600;
+      }
+
+      /* ===== ABOUT ===== */
+      #about {
+        background: linear-gradient(135deg, #f8f5ff 0%, #fff4fb 100%);
+      }
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 60px;
+        align-items: center;
+      }
+      .about-visual {
+        position: relative;
+      }
+      .about-main-block {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        border-radius: 24px;
+        padding: 36px;
+        color: #fff;
+        box-shadow: 0 20px 60px rgba(108, 63, 220, 0.25);
+      }
+      .about-main-block h3 {
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+      }
+      .about-main-block p {
+        font-size: 0.95rem;
+        opacity: 0.9;
+        line-height: 1.8;
+        margin-bottom: 14px;
+      }
+      .about-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+      .about-tag {
+        background: rgba(255, 255, 255, 0.18);
+        backdrop-filter: blur(8px);
+        padding: 5px 14px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 600;
+      }
+      .about-float-card {
+        position: absolute;
+        bottom: -24px;
+        right: -20px;
+        background: #fff;
+        border-radius: 16px;
+        padding: 16px 20px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+        min-width: 170px;
+      }
+      .about-float-card .title {
+        font-size: 0.75rem;
+        color: var(--text-light);
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .about-float-card .items {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .about-float-card .item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.82rem;
+        font-weight: 600;
+        color: var(--text);
+      }
+      .afc-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--accent2);
+      }
+      .about-content .info-rows {
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        margin-top: 24px;
+      }
+      .info-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px;
+        border-radius: 12px;
+        background: #fff;
+        border: 1px solid rgba(108, 63, 220, 0.08);
+        box-shadow: 0 2px 12px rgba(108, 63, 220, 0.06);
+      }
+      .ir-icon {
+        width: 36px;
+        height: 36px;
+        border-radius: 10px;
+        flex-shrink: 0;
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          var(--primary-light)
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 0.95rem;
+      }
+      .ir-text .ir-label {
+        font-size: 0.75rem;
+        color: var(--text-light);
+        font-weight: 600;
+        margin-bottom: 2px;
+      }
+      .ir-text .ir-val {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--text);
+      }
+
+      /* ===== DEPARTMENTS ===== */
+      #departments {
+        background: #fff;
+      }
+      .dept-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .dept-card {
+        border-radius: var(--radius);
+        padding: 36px 28px;
+        color: #fff;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+        transition: var(--transition);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+      }
+      .dept-card:hover {
+        transform: translateY(-10px) scale(1.02);
+      }
+      .dept-card.science {
+        background: linear-gradient(135deg, #6c3fdc, #00d4ff);
+      }
+      .dept-card.business {
+        background: linear-gradient(135deg, #f7458a, #ff8c42);
+      }
+      .dept-card.humanities {
+        background: linear-gradient(135deg, #43e97b, #09c6f9);
+      }
+      .dept-bg-shape {
+        position: absolute;
+        right: -30px;
+        bottom: -30px;
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dept-bg-shape2 {
+        position: absolute;
+        right: 20px;
+        top: -20px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.07);
+      }
+      .dept-icon {
+        width: 64px;
+        height: 64px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        backdrop-filter: blur(8px);
+      }
+      .dept-name {
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.4rem;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+      .dept-bn {
+        font-size: 1rem;
+        opacity: 0.85;
+        margin-bottom: 14px;
+      }
+      .dept-desc {
+        font-size: 0.88rem;
+        opacity: 0.8;
+        line-height: 1.7;
+        margin-bottom: 20px;
+      }
+      .dept-subjects {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .dept-sub {
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(5px);
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 0.75rem;
+        font-weight: 600;
+      }
+      .dept-arrow {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        width: 36px;
+        height: 36px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1rem;
+      }
+
+      /* ===== FEATURES ===== */
+      #features {
+        background: linear-gradient(135deg, #f8f5ff 0%, #fff4fb 100%);
+      }
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .feature-box {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 28px 22px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: 1px solid rgba(108, 63, 220, 0.07);
+        position: relative;
+        overflow: hidden;
+      }
+      .feature-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 4px;
+        background: var(
+          --grad,
+          linear-gradient(180deg, var(--primary), var(--secondary))
+        );
+      }
+      .feature-box:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-hover);
+        border-color: rgba(108, 63, 220, 0.15);
+      }
+      .feature-icon {
+        width: 52px;
+        height: 52px;
+        background: var(
+          --grad,
+          linear-gradient(135deg, var(--primary), var(--secondary))
+        );
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        margin-bottom: 16px;
+        box-shadow: 0 6px 20px rgba(108, 63, 220, 0.25);
+      }
+      .feature-title {
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: var(--text);
+        margin-bottom: 8px;
+      }
+      .feature-desc {
+        font-size: 0.88rem;
+        color: var(--text-light);
+        line-height: 1.7;
+      }
+
+      /* ===== NOTICE ===== */
+      #notice {
+        background: #fff;
+      }
+      .notice-wrapper {
+        background: linear-gradient(135deg, var(--dark), var(--dark2));
+        border-radius: 28px;
+        padding: 50px;
+        position: relative;
+        overflow: hidden;
+      }
+      .notice-wrapper::before {
+        content: "";
+        position: absolute;
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: var(--primary);
+        opacity: 0.06;
+        top: -100px;
+        right: -100px;
+        filter: blur(60px);
+      }
+      .notice-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 36px;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+      .notice-header h2 {
+        font-family: "Exo 2", sans-serif;
+        color: #fff;
+        font-size: 1.8rem;
+        font-weight: 800;
+      }
+      .notice-live {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.08);
+        padding: 6px 14px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.8);
+        font-weight: 600;
+      }
+      .notice-live::before {
+        content: "";
+        width: 8px;
+        height: 8px;
+        background: #ff4d4d;
+        border-radius: 50%;
+        animation: pulse 1.5s infinite;
+      }
+      .notice-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .notice-card {
+        background: rgba(255, 255, 255, 0.06);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: var(--radius);
+        padding: 24px;
+        transition: var(--transition);
+        cursor: pointer;
+      }
+      .notice-card:hover {
+        background: rgba(255, 255, 255, 0.1);
+        transform: translateY(-4px);
+      }
+      .notice-type {
+        display: inline-block;
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        font-family: "Exo 2", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 14px;
+      }
+      .nt-red {
+        background: rgba(247, 69, 138, 0.25);
+        color: #ff6fac;
+      }
+      .nt-green {
+        background: rgba(67, 233, 123, 0.2);
+        color: #43e97b;
+      }
+      .nt-blue {
+        background: rgba(0, 212, 255, 0.2);
+        color: var(--accent);
+      }
+      .notice-title {
+        font-family: "Exo 2", sans-serif;
+        color: #fff;
+        font-weight: 700;
+        font-size: 1rem;
+        margin-bottom: 8px;
+      }
+      .notice-bn {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.88rem;
+        line-height: 1.6;
+        margin-bottom: 14px;
+      }
+      .notice-date {
+        font-size: 0.78rem;
+        color: rgba(255, 255, 255, 0.4);
+        font-weight: 600;
+      }
+      .notice-arrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        color: var(--accent);
+        font-size: 0.82rem;
+        font-weight: 700;
+        margin-top: 12px;
+      }
+
+      /* ===== SUBJECTS ===== */
+      #subjects {
+        background: linear-gradient(135deg, #f8f5ff 0%, #fff4fb 100%);
+      }
+      .subjects-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+      }
+      .subject-card {
+        background: #fff;
+        border-radius: var(--radius-sm);
+        padding: 22px 18px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: 1px solid rgba(108, 63, 220, 0.07);
+        cursor: pointer;
+      }
+      .subject-card:hover {
+        transform: translateX(6px);
+        box-shadow: var(--shadow-hover);
+        border-color: rgba(108, 63, 220, 0.2);
+      }
+      .subj-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: var(
+          --grad,
+          linear-gradient(135deg, var(--primary), var(--secondary))
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+        color: #fff;
+        font-family: "Exo 2", sans-serif;
+        font-weight: 800;
+        font-size: 0.85rem;
+      }
+      .subj-name {
+        font-family: "Exo 2", sans-serif;
+        font-weight: 700;
+        font-size: 1rem;
+        color: var(--text);
+        margin-bottom: 3px;
+      }
+      .subj-code {
+        font-size: 0.78rem;
+        color: var(--text-light);
+        font-weight: 600;
+      }
+
+      /* ===== VIDEO ===== */
+      #video {
+        background: #fff;
+        padding: 80px 0;
+      }
+      .video-inner {
+        background: linear-gradient(135deg, var(--dark), var(--dark2));
+        border-radius: 28px;
+        overflow: hidden;
+        position: relative;
+        aspect-ratio: 16/7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 30px 80px rgba(0, 0, 0, 0.25);
+      }
+      .video-inner::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background:
+          radial-gradient(
+            circle at 20% 80%,
+            rgba(108, 63, 220, 0.3) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 80% 20%,
+            rgba(247, 69, 138, 0.25) 0%,
+            transparent 50%
+          ),
+          radial-gradient(
+            circle at 50% 50%,
+            rgba(0, 212, 255, 0.1) 0%,
+            transparent 60%
+          );
+      }
+      .video-grid-lines {
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 40px 40px;
+      }
+      .play-btn-wrap {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+      }
+      .play-btn {
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 16px;
+        cursor: pointer;
+        transition: var(--transition);
+        position: relative;
+      }
+      .play-btn::before {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        border-radius: 50%;
+        animation: playRing 2s ease-out infinite;
+      }
+      @keyframes playRing {
+        0% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+        100% {
+          transform: scale(1.5);
+          opacity: 0;
+        }
+      }
+      .play-btn:hover {
+        background: rgba(255, 255, 255, 0.25);
+        transform: scale(1.1);
+      }
+      .play-icon {
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 14px 0 14px 24px;
+        border-color: transparent transparent transparent #fff;
+        margin-left: 4px;
+      }
+      .play-label {
+        color: rgba(255, 255, 255, 0.8);
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+      .video-tag {
+        position: absolute;
+        top: 24px;
+        left: 24px;
+        z-index: 2;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #fff;
+        padding: 6px 16px;
+        border-radius: 50px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        font-family: "Exo 2", sans-serif;
+      }
+
+      /* ===== TESTIMONIALS ===== */
+      #testimonials {
+        background: linear-gradient(135deg, #f8f5ff 0%, #fff4fb 100%);
+      }
+      .testi-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+      .testi-card {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 28px;
+        box-shadow: var(--shadow);
+        transition: var(--transition);
+        border: 1px solid rgba(108, 63, 220, 0.07);
+        position: relative;
+      }
+      .testi-card:hover {
+        transform: translateY(-6px);
+        box-shadow: var(--shadow-hover);
+      }
+      .testi-quote {
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        font-size: 4rem;
+        line-height: 1;
+        font-family: "Exo 2", sans-serif;
+        font-weight: 900;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        opacity: 0.15;
+      }
+      .stars {
+        display: flex;
+        gap: 3px;
+        margin-bottom: 14px;
+      }
+      .star {
+        color: #ffc107;
+        font-size: 1rem;
+      }
+      .testi-text {
+        font-size: 0.92rem;
+        color: var(--text-light);
+        line-height: 1.8;
+        margin-bottom: 20px;
+        font-style: italic;
+      }
+      .testi-author {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .testi-avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-family: "Exo 2", sans-serif;
+        font-weight: 800;
+        font-size: 0.9rem;
+      }
+      .testi-name {
+        font-weight: 700;
+        font-size: 0.9rem;
+        color: var(--text);
+      }
+      .testi-class {
+        font-size: 0.78rem;
+        color: var(--text-light);
+      }
+
+      /* ===== FAQ ===== */
+      #faq {
+        background: #fff;
+      }
+      .faq-list {
+        max-width: 760px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .faq-item {
+        border-radius: var(--radius-sm);
+        border: 1px solid rgba(108, 63, 220, 0.1);
+        overflow: hidden;
+        transition: var(--transition);
+      }
+      .faq-item.open {
+        border-color: rgba(108, 63, 220, 0.3);
+        box-shadow: 0 4px 20px rgba(108, 63, 220, 0.1);
+      }
+      .faq-q {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 18px 22px;
+        cursor: pointer;
+        background: #fff;
+        transition: var(--transition);
+        gap: 12px;
+      }
+      .faq-q:hover {
+        background: rgba(108, 63, 220, 0.03);
+      }
+      .faq-item.open .faq-q {
+        background: rgba(108, 63, 220, 0.05);
+      }
+      .faq-q-text {
+        font-weight: 700;
+        font-size: 0.95rem;
+        color: var(--text);
+      }
+      .faq-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        flex-shrink: 0;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 700;
+        transition: transform 0.3s;
+      }
+      .faq-item.open .faq-icon {
+        transform: rotate(45deg);
+      }
+      .faq-a {
+        max-height: 0;
+        overflow: hidden;
+        transition:
+          max-height 0.4s ease,
+          padding 0.3s;
+        background: #fafbff;
+      }
+      .faq-item.open .faq-a {
+        max-height: 200px;
+        padding: 0 22px 18px;
+      }
+      .faq-a p {
+        font-size: 0.9rem;
+        color: var(--text-light);
+        line-height: 1.8;
+        padding-top: 14px;
+      }
+
+      /* ===== CONTACT ===== */
+      #contact {
+        background: linear-gradient(135deg, #f8f5ff 0%, #fff4fb 100%);
+      }
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+      .contact-card {
+        background: #fff;
+        border-radius: var(--radius);
+        padding: 36px;
+        box-shadow: var(--shadow);
+      }
+      .contact-card h3 {
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: var(--text);
+        margin-bottom: 24px;
+      }
+      .contact-items {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+      }
+      .ci-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+      }
+      .ci-icon.purple {
+        background: rgba(108, 63, 220, 0.1);
+        color: var(--primary);
+      }
+      .ci-icon.pink {
+        background: rgba(247, 69, 138, 0.1);
+        color: var(--secondary);
+      }
+      .ci-icon.cyan {
+        background: rgba(0, 212, 255, 0.1);
+        color: #00a8cc;
+      }
+      .ci-icon.green {
+        background: rgba(67, 233, 123, 0.15);
+        color: #20b259;
+      }
+      .ci-label {
+        font-size: 0.75rem;
+        color: var(--text-light);
+        font-weight: 600;
+        margin-bottom: 3px;
+      }
+      .ci-val {
+        font-size: 0.92rem;
+        font-weight: 700;
+        color: var(--text);
+      }
+      .map-card {
+        background: linear-gradient(135deg, var(--dark), var(--dark2));
+        border-radius: var(--radius);
+        padding: 36px;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 320px;
+        position: relative;
+        overflow: hidden;
+      }
+      .map-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 30px 30px;
+      }
+      .map-card .pin {
+        position: relative;
+        z-index: 2;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(
+          135deg,
+          var(--secondary),
+          var(--secondary-light)
+        );
+        border-radius: 50% 50% 50% 0;
+        transform: rotate(-45deg);
+        margin-bottom: 20px;
+        box-shadow: 0 10px 30px rgba(247, 69, 138, 0.3);
+      }
+      .map-card .pin::after {
+        content: "";
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        background: #fff;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .map-card h3 {
+        position: relative;
+        z-index: 2;
+        font-family: "Exo 2", sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+      .map-card p {
+        position: relative;
+        z-index: 2;
+        font-size: 0.88rem;
+        color: rgba(255, 255, 255, 0.7);
+        line-height: 1.7;
+        margin-bottom: 24px;
+      }
+      .map-btn {
+        position: relative;
+        z-index: 2;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #fff;
+        padding: 12px 24px;
+        border-radius: 50px;
+        font-weight: 700;
+        font-family: "Exo 2", sans-serif;
+        font-size: 0.88rem;
+        transition: var(--transition);
+        box-shadow: 0 6px 20px rgba(108, 63, 220, 0.3);
+        width: fit-content;
+      }
+      .map-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 30px rgba(108, 63, 220, 0.4);
+      }
+
+      /* ===== CTA BANNER ===== */
+      #cta {
+        padding: 80px 0;
+      }
+      .cta-inner {
+        background: linear-gradient(
+          135deg,
+          var(--primary),
+          #a855f7,
+          var(--secondary)
+        );
+        border-radius: 28px;
+        padding: 60px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(108, 63, 220, 0.35);
+      }
+      .cta-inner::before {
+        content: "";
+        position: absolute;
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.06);
+        top: -200px;
+        right: -100px;
+      }
+      .cta-inner::after {
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.04);
+        bottom: -100px;
+        left: -50px;
+      }
+      .cta-inner h2 {
+        font-family: "Exo 2", sans-serif;
+        color: #fff;
+        font-size: clamp(1.6rem, 4vw, 2.5rem);
+        font-weight: 800;
+        margin-bottom: 12px;
+        position: relative;
+        z-index: 2;
+      }
+      .cta-inner p {
+        color: rgba(255, 255, 255, 0.85);
+        font-size: 1rem;
+        margin-bottom: 30px;
+        position: relative;
+        z-index: 2;
+      }
+      .cta-btns {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 2;
+      }
+      .btn-white {
+        background: #fff;
+        color: var(--primary);
+        font-weight: 700;
+        padding: 14px 32px;
+        border-radius: 50px;
+        font-family: "Exo 2", sans-serif;
+        font-size: 0.95rem;
+        transition: var(--transition);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+      .btn-white:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+      }
+
+      /* ===== FOOTER ===== */
+      footer {
+        background: linear-gradient(135deg, var(--dark), var(--dark2));
+        color: #fff;
+        padding: 60px 0 0;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 40px;
+        margin-bottom: 50px;
+      }
+      .footer-brand .logo-text {
+        font-family: "Exo 2", sans-serif;
+        font-weight: 800;
+        font-size: 1.1rem;
+        margin-bottom: 6px;
+      }
+      .footer-brand .logo-text span {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 500;
+        background: linear-gradient(
+          135deg,
+          var(--accent),
+          var(--primary-light)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+      .footer-brand p {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.55);
+        line-height: 1.8;
+        margin-top: 12px;
+        margin-bottom: 20px;
+      }
+      .social-links {
+        display: flex;
+        gap: 10px;
+      }
+      .social-link {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.08);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 0.85rem;
+        font-weight: 700;
+        transition: var(--transition);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        font-family: "Exo 2", sans-serif;
+      }
+      .social-link:hover {
+        background: linear-gradient(135deg, var(--primary), var(--secondary));
+        color: #fff;
+        border-color: transparent;
+        transform: translateY(-3px);
+      }
+      .footer-col h4 {
+        font-family: "Exo 2", sans-serif;
+        font-weight: 700;
+        font-size: 0.95rem;
+        margin-bottom: 18px;
+        color: #fff;
+      }
+      .footer-col ul {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .footer-col ul a {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.55);
+        transition: var(--transition);
+      }
+      .footer-col ul a:hover {
+        color: var(--primary-light);
+        padding-left: 4px;
+      }
+      .footer-bottom {
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+      .footer-bottom p {
+        font-size: 0.82rem;
+        color: rgba(255, 255, 255, 0.4);
+      }
+      .footer-bottom span {
+        background: linear-gradient(
+          135deg,
+          var(--primary-light),
+          var(--secondary)
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-weight: 700;
+      }
+
+      /* ===== SCROLL REVEAL ===== */
+      .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.revealed {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal-left {
+        opacity: 0;
+        transform: translateX(-40px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal-left.revealed {
+        opacity: 1;
+        transform: none;
+      }
+      .reveal-right {
+        opacity: 0;
+        transform: translateX(40px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal-right.revealed {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ===== RESPONSIVE ===== */
+      @media (max-width: 1024px) {
+        .info-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .hero-visual {
+          display: none;
+        }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      @media (max-width: 768px) {
+        section {
+          padding: 60px 0;
+        }
+        .nav-links {
+          display: none;
+        }
+        .hamburger {
+          display: flex;
+        }
+        .dept-grid {
+          grid-template-columns: 1fr;
+        }
+        .features-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .notice-grid {
+          grid-template-columns: 1fr;
+        }
+        .subjects-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .testi-grid {
+          grid-template-columns: 1fr;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .cta-inner {
+          padding: 40px 24px;
+        }
+        .notice-wrapper {
+          padding: 30px 20px;
+        }
+        .hero-stats {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 10px;
+        }
+        .hero-stat .num {
+          font-size: 1.2rem;
+        }
+        .hero-btns .btn {
+          padding: 12px 22px;
+          font-size: 0.88rem;
+        }
+      }
+      @media (max-width: 480px) {
+        .info-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .features-grid {
+          grid-template-columns: 1fr;
+        }
+        .subjects-grid {
+          grid-template-columns: 1fr;
+        }
+        .hero-stats {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav id="navbar">
+      <div class="nav-inner">
+        <a href="#" class="nav-logo">
+          <div class="logo-icon">JC</div>
+          <div class="logo-text">
+            Jadurchar Model
+            <span>Degree College</span>
+          </div>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#departments">Departments</a></li>
+          <li><a href="#notice">Notice</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact" class="nav-cta">যোগাযোগ</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#departments">Departments</a>
+        <a href="#notice">Notice</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">যোগাযোগ</a>
+      </div>
+    </nav>
+
+    <!-- ===== HERO ===== -->
+    <section id="hero">
+      <div class="hero-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+      </div>
+      <div class="hero-shapes">
+        <div class="shape shape-ring"></div>
+        <div class="shape shape-ring2"></div>
+        <div class="shape shape-dot"></div>
+        <div class="shape shape-sq"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-grid">
+          <div class="hero-text">
+            <div class="hero-badge">
+              🎓 EIIN: 122582 &nbsp;|&nbsp; স্বীকৃতি: ২০১৭
+            </div>
+            <h1 class="hero-title">
+              Complete College<br /><span class="grad">Experience</span>
+            </h1>
+            <p class="hero-sub">যাদুর চর মডেল ডিগ্রি কলেজে আপনাকে স্বাগতম</p>
+            <p class="hero-desc">
+              মানসম্পন্ন শিক্ষা, দক্ষ শিক্ষকমণ্ডলী এবং আধুনিক পরিবেশে আপনার
+              উজ্জ্বল ভবিষ্যৎ গড়ে তুলুন।
+            </p>
+            <div class="hero-btns">
+              <a href="#contact" class="btn btn-primary">📋 ভর্তি তথ্য</a>
+              <a href="#contact" class="btn btn-outline">📞 যোগাযোগ করুন</a>
+            </div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="num">25+</div>
+                <div class="label">বছরের অভিজ্ঞতা</div>
+              </div>
+              <div class="hero-stat">
+                <div class="num">500+</div>
+                <div class="label">ছাত্রছাত্রী</div>
+              </div>
+              <div class="hero-stat">
+                <div class="num">3</div>
+                <div class="label">বিভাগ</div>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="mini-float mf1">🎓 Government Approved</div>
+            <div class="hero-card-float">
+              <div class="card-float-header">
+                <div class="card-float-icon">🏫</div>
+                <div>
+                  <div class="card-float-title">যাদুর চর কলেজ</div>
+                  <div class="card-float-sub">দিনাজপুর বোর্ড</div>
+                </div>
+              </div>
+              <div class="card-float-items">
+                <div class="cfi">
+                  <div class="cfi-dot purple"></div>
+                  <span>বিজ্ঞান বিভাগ</span>
+                  <div class="bar"></div>
+                </div>
+                <div class="cfi">
+                  <div class="cfi-dot pink"></div>
+                  <span>ব্যবসায় শিক্ষা</span>
+                  <div class="bar"></div>
+                </div>
+                <div class="cfi">
+                  <div class="cfi-dot cyan"></div>
+                  <span>মানবিক বিভাগ</span>
+                  <div class="bar"></div>
+                </div>
+              </div>
+            </div>
+            <div class="mini-float mf2">✅ MPO স্বীকৃত</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== INFO CARDS ===== -->
+    <section id="info">
+      <div class="container">
+        <div class="info-grid">
+          <div
+            class="info-card reveal"
+            style="--grad: linear-gradient(135deg, #6c3fdc, #9b6ff5)"
+          >
+            <div class="info-card-icon">🆔</div>
+            <div class="info-card-num">122582</div>
+            <div class="info-card-label">EIIN নম্বর</div>
+          </div>
+          <div
+            class="info-card reveal"
+            style="--grad: linear-gradient(135deg, #f7458a, #ff8c42)"
+          >
+            <div class="info-card-icon">📅</div>
+            <div class="info-card-num">১৯৯৯</div>
+            <div class="info-card-label">প্রতিষ্ঠা সাল</div>
+          </div>
+          <div
+            class="info-card reveal"
+            style="--grad: linear-gradient(135deg, #00d4ff, #0070cc)"
+          >
+            <div class="info-card-icon">✅</div>
+            <div class="info-card-num">২০১৭</div>
+            <div class="info-card-label">স্বীকৃতি সাল</div>
+          </div>
+          <div
+            class="info-card reveal"
+            style="--grad: linear-gradient(135deg, #43e97b, #09c6f9)"
+          >
+            <div class="info-card-icon">🏛️</div>
+            <div class="info-card-num">দিনাজপুর</div>
+            <div class="info-card-label">শিক্ষা বোর্ড</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual reveal-left">
+            <div class="about-main-block">
+              <h3>🏫 যাদুর চর মডেল ডিগ্রি কলেজ</h3>
+              <p>
+                এই কলেজটি ১৯৯৯ সালে প্রতিষ্ঠিত হয় এবং ২০১৭ সালে সরকারি স্বীকৃতি
+                লাভ করে। বর্তমানে কলেজটি MPO ভুক্ত এবং একটি অ্যাডহক ম্যানেজমেন্ট
+                কমিটির অধীনে পরিচালিত হচ্ছে।
+              </p>
+              <p>
+                দিনাজপুর বোর্ডের অধীনে দিনশিফটে বাংলা ভার্সনে পাঠদান পরিচালিত
+                হয়।
+              </p>
+              <div class="about-tags">
+                <span class="about-tag">📚 Day Shift</span>
+                <span class="about-tag">🇧🇩 Bangla Version</span>
+                <span class="about-tag">✅ MPO Approved</span>
+                <span class="about-tag">🏛️ Adhoc Management</span>
+              </div>
+            </div>
+            <div class="about-float-card">
+              <div class="title">কলেজ সুবিধা</div>
+              <div class="items">
+                <div class="item">
+                  <span class="afc-dot"></span>অভিজ্ঞ শিক্ষকমণ্ডলী
+                </div>
+                <div class="item">
+                  <span
+                    class="afc-dot"
+                    style="background: var(--secondary)"
+                  ></span
+                  >ডিজিটাল লাইব্রেরি
+                </div>
+                <div class="item">
+                  <span class="afc-dot" style="background: var(--accent)"></span
+                  >নিরাপদ ক্যাম্পাস
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="about-content reveal-right">
+            <div class="section-tag">আমাদের সম্পর্কে</div>
+            <h2 class="section-title">
+              মানসম্পন্ন <span>শিক্ষার</span> প্রতিশ্রুতি
+            </h2>
+            <p class="section-sub">
+              Jadurchar Model Degree College is committed to providing quality
+              education and shaping the future of students in a modern,
+              supportive environment.
+            </p>
+            <div class="info-rows">
+              <div class="info-row">
+                <div class="ir-icon">📋</div>
+                <div class="ir-text">
+                  <div class="ir-label">প্রতিষ্ঠা সাল</div>
+                  <div class="ir-val">১৯৯৯ সাল (Established 1999)</div>
+                </div>
+              </div>
+              <div class="info-row">
+                <div
+                  class="ir-icon"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      var(--secondary),
+                      var(--secondary-light)
+                    );
+                  "
+                >
+                  🏆
+                </div>
+                <div class="ir-text">
+                  <div class="ir-label">সরকারি স্বীকৃতি</div>
+                  <div class="ir-val">২০১৭ সাল — MPO ভুক্ত</div>
+                </div>
+              </div>
+              <div class="info-row">
+                <div
+                  class="ir-icon"
+                  style="
+                    background: linear-gradient(135deg, var(--accent), #0070cc);
+                  "
+                >
+                  🏛️
+                </div>
+                <div class="ir-text">
+                  <div class="ir-label">বোর্ড ও শিফট</div>
+                  <div class="ir-val">
+                    দিনাজপুর বোর্ড | দিন শিফট | বাংলা ভার্সন
+                  </div>
+                </div>
+              </div>
+              <div class="info-row">
+                <div
+                  class="ir-icon"
+                  style="
+                    background: linear-gradient(
+                      135deg,
+                      var(--accent2),
+                      #09c6f9
+                    );
+                  "
+                >
+                  🔢
+                </div>
+                <div class="ir-text">
+                  <div class="ir-label">EIIN নম্বর</div>
+                  <div class="ir-val">122582</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DEPARTMENTS ===== -->
+    <section id="departments">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">বিভাগসমূহ</div>
+          <h2 class="section-title">আমাদের <span>একাডেমিক</span> বিভাগ</h2>
+          <p class="section-sub">
+            তিনটি প্রধান বিভাগে উচ্চমানের শিক্ষা প্রদান করা হয়
+          </p>
+        </div>
+        <div class="dept-grid">
+          <div class="dept-card science reveal">
+            <div class="dept-bg-shape"></div>
+            <div class="dept-bg-shape2"></div>
+            <div class="dept-arrow">→</div>
+            <div class="dept-icon">🔬</div>
+            <div class="dept-name">Science</div>
+            <div class="dept-bn">বিজ্ঞান বিভাগ</div>
+            <div class="dept-desc">
+              পদার্থ, রসায়ন, জীববিজ্ঞান ও গণিতসহ বিজ্ঞানের সকল শাখায় পাঠদান।
+            </div>
+            <div class="dept-subjects">
+              <span class="dept-sub">Physics</span>
+              <span class="dept-sub">Chemistry</span>
+              <span class="dept-sub">Biology</span>
+              <span class="dept-sub">Math</span>
+            </div>
+          </div>
+          <div class="dept-card business reveal">
+            <div class="dept-bg-shape"></div>
+            <div class="dept-bg-shape2"></div>
+            <div class="dept-arrow">→</div>
+            <div class="dept-icon">📊</div>
+            <div class="dept-name">Business Studies</div>
+            <div class="dept-bn">ব্যবসায় শিক্ষা বিভাগ</div>
+            <div class="dept-desc">
+              হিসাববিজ্ঞান, ব্যবস্থাপনা ও উদ্যোক্তা শিক্ষায় দক্ষ করে তোলা হয়।
+            </div>
+            <div class="dept-subjects">
+              <span class="dept-sub">Accounting</span>
+              <span class="dept-sub">Management</span>
+              <span class="dept-sub">Finance</span>
+              <span class="dept-sub">Marketing</span>
+            </div>
+          </div>
+          <div class="dept-card humanities reveal">
+            <div class="dept-bg-shape"></div>
+            <div class="dept-bg-shape2"></div>
+            <div class="dept-arrow">→</div>
+            <div class="dept-icon">📖</div>
+            <div class="dept-name">Humanities</div>
+            <div class="dept-bn">মানবিক বিভাগ</div>
+            <div class="dept-desc">
+              ইতিহাস, ভূগোল, সমাজবিজ্ঞান ও বাংলা সাহিত্যে জ্ঞান অর্জন।
+            </div>
+            <div class="dept-subjects">
+              <span class="dept-sub">History</span>
+              <span class="dept-sub">Geography</span>
+              <span class="dept-sub">Sociology</span>
+              <span class="dept-sub">Bangla</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section id="features">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">আমাদের বৈশিষ্ট্য</div>
+          <h2 class="section-title">কেন <span>আমাদের</span> কলেজ?</h2>
+          <p class="section-sub">
+            আমরা শিক্ষার মান, পরিবেশ এবং ক্যারিয়ার গড়ার সুযোগ নিশ্চিত করি
+          </p>
+        </div>
+        <div class="features-grid">
+          <div
+            class="feature-box reveal"
+            style="--grad: linear-gradient(180deg, #6c3fdc, #9b6ff5)"
+          >
+            <div
+              class="feature-icon"
+              style="--grad: linear-gradient(135deg, #6c3fdc, #9b6ff5)"
+            >
+              👨‍🏫
+            </div>
+            <div class="feature-title">Experienced Teachers</div>
+            <div class="feature-desc">
+              অভিজ্ঞ ও দক্ষ শিক্ষকমণ্ডলী প্রতিটি শিক্ষার্থীকে ব্যক্তিগতভাবে
+              সহায়তা করেন।
+            </div>
+          </div>
+          <div
+            class="feature-box reveal"
+            style="--grad: linear-gradient(180deg, #f7458a, #ff8c42)"
+          >
+            <div
+              class="feature-icon"
+              style="--grad: linear-gradient(135deg, #f7458a, #ff8c42)"
+            >
+              📱
+            </div>
+            <div class="feature-title">Modern Education</div>
+            <div class="feature-desc">
+              আধুনিক শিক্ষা পদ্ধতিতে শিক্ষার্থীদের সৃজনশীলতা বিকাশ করা হয়।
+            </div>
+          </div>
+          <div
+            class="feature-box reveal"
+            style="--grad: linear-gradient(180deg, #00d4ff, #0070cc)"
+          >
+            <div
+              class="feature-icon"
+              style="--grad: linear-gradient(135deg, #00d4ff, #0070cc)"
+            >
+              💻
+            </div>
+            <div class="feature-title">Digital Learning</div>
+            <div class="feature-desc">
+              ডিজিটাল প্রযুক্তি ব্যবহার করে শিক্ষা আরও আকর্ষণীয় ও কার্যকর করা
+              হয়।
+            </div>
+          </div>
+          <div
+            class="feature-box reveal"
+            style="--grad: linear-gradient(180deg, #43e97b, #09c6f9)"
+          >
+            <div
+              class="feature-icon"
+              style="--grad: linear-gradient(135deg, #43e97b, #09c6f9)"
+            >
+              🏛️
+            </div>
+            <div class="feature-title">Government Approved</div>
+            <div class="feature-desc">
+              সরকার অনুমোদিত ও MPO ভুক্ত প্রতিষ্ঠান — সনদের মূল্য অপরিসীম।
+            </div>
+          </div>
+          <div
+            class="feature-box reveal"
+            style="--grad: linear-gradient(180deg, #a855f7, #6c3fdc)"
+          >
+            <div
+              class="feature-icon"
+              style="--grad: linear-gradient(135deg, #a855f7, #6c3fdc)"
+            >
+              🛡️
+            </div>
+            <div class="feature-title">Safe Campus</div>
+            <div class="feature-desc">
+              নিরাপদ ও বন্ধুত্বপূর্ণ ক্যাম্পাস পরিবেশে শিক্ষার্থীরা মনোযোগ দিতে
+              পারে।
+            </div>
+          </div>
+          <div
+            class="feature-box reveal"
+            style="--grad: linear-gradient(180deg, #ff8c42, #f7458a)"
+          >
+            <div
+              class="feature-icon"
+              style="--grad: linear-gradient(135deg, #ff8c42, #f7458a)"
+            >
+              🚀
+            </div>
+            <div class="feature-title">Career Guidance</div>
+            <div class="feature-desc">
+              ভবিষ্যৎ ক্যারিয়ার পরিকল্পনায় শিক্ষার্থীদের সঠিক দিকনির্দেশনা
+              দেওয়া হয়।
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== NOTICE ===== -->
+    <section id="notice">
+      <div class="container">
+        <div class="notice-wrapper reveal">
+          <div class="notice-header">
+            <h2>📢 নোটিশ বোর্ড</h2>
+            <div class="notice-live">Live Updates</div>
+          </div>
+          <div class="notice-grid">
+            <div class="notice-card">
+              <div class="notice-type nt-red">🔴 Urgent</div>
+              <div class="notice-title">Admission Open 2024-25</div>
+              <div class="notice-bn">
+                একাদশ শ্রেণিতে ভর্তি চলছে — বিজ্ঞান, ব্যবসায় ও মানবিক বিভাগে
+                আসন সীমিত।
+              </div>
+              <div class="notice-date">📅 ২০ এপ্রিল ২০২৫</div>
+              <div class="notice-arrow">বিস্তারিত দেখুন →</div>
+            </div>
+            <div class="notice-card">
+              <div class="notice-type nt-blue">🔵 Exam</div>
+              <div class="notice-title">Half-Yearly Exam Routine</div>
+              <div class="notice-bn">
+                অর্ধ-বার্ষিক পরীক্ষার রুটিন প্রকাশিত হয়েছে। সকল শিক্ষার্থী
+                মনোযোগ দিন।
+              </div>
+              <div class="notice-date">📅 ১৫ এপ্রিল ২০২৫</div>
+              <div class="notice-arrow">রুটিন দেখুন →</div>
+            </div>
+            <div class="notice-card">
+              <div class="notice-type nt-green">🟢 Holiday</div>
+              <div class="notice-title">Eid Holiday Notice</div>
+              <div class="notice-bn">
+                ঈদুল আযহা উপলক্ষে কলেজ ছুটি থাকবে। তারিখ পরে জানানো হবে।
+              </div>
+              <div class="notice-date">📅 ১০ এপ্রিল ২০২৫</div>
+              <div class="notice-arrow">বিস্তারিত →</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SUBJECTS ===== -->
+    <section id="subjects">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">বিষয়সমূহ</div>
+          <h2 class="section-title">পাঠ্য <span>বিষয়</span> সমূহ</h2>
+          <p class="section-sub">
+            সকল বিভাগে বোর্ড অনুমোদিত বিষয়সমূহ পড়ানো হয়
+          </p>
+        </div>
+        <div class="subjects-grid">
+          <div
+            class="subject-card reveal"
+            style="--grad: linear-gradient(135deg, #6c3fdc, #9b6ff5)"
+          >
+            <div class="subj-icon">ICT</div>
+            <div>
+              <div class="subj-name">ICT / তথ্যপ্রযুক্তি</div>
+              <div class="subj-code">
+                Information & Communication Technology
+              </div>
+            </div>
+          </div>
+          <div
+            class="subject-card reveal"
+            style="--grad: linear-gradient(135deg, #f7458a, #ff8c42)"
+          >
+            <div class="subj-icon">BN</div>
+            <div>
+              <div class="subj-name">বাংলা</div>
+              <div class="subj-code">Bangla Language & Literature</div>
+            </div>
+          </div>
+          <div
+            class="subject-card reveal"
+            style="--grad: linear-gradient(135deg, #00d4ff, #0070cc)"
+          >
+            <div class="subj-icon">EN</div>
+            <div>
+              <div class="subj-name">English</div>
+              <div class="subj-code">English Language & Literature</div>
+            </div>
+          </div>
+          <div
+            class="subject-card reveal"
+            style="--grad: linear-gradient(135deg, #43e97b, #09c6f9)"
+          >
+            <div class="subj-icon">MTH</div>
+            <div>
+              <div class="subj-name">গণিত / Mathematics</div>
+              <div class="subj-code">Higher Mathematics & Statistics</div>
+            </div>
+          </div>
+          <div
+            class="subject-card reveal"
+            style="--grad: linear-gradient(135deg, #a855f7, #6c3fdc)"
+          >
+            <div class="subj-icon">PHY</div>
+            <div>
+              <div class="subj-name">পদার্থবিজ্ঞান</div>
+              <div class="subj-code">Physics — Science Group</div>
+            </div>
+          </div>
+          <div
+            class="subject-card reveal"
+            style="--grad: linear-gradient(135deg, #ff8c42, #f7458a)"
+          >
+            <div class="subj-icon">ACC</div>
+            <div>
+              <div class="subj-name">হিসাববিজ্ঞান</div>
+              <div class="subj-code">Accounting — Business Group</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VIDEO ===== -->
+    <section id="video">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">কলেজ ভিডিও</div>
+          <h2 class="section-title">আমাদের <span>ক্যাম্পাস</span> পরিচিতি</h2>
+        </div>
+        <div class="video-inner reveal">
+          <div class="video-grid-lines"></div>
+          <div class="video-tag">🎬 Campus Tour</div>
+          <div class="play-btn-wrap">
+            <div class="play-btn">
+              <div class="play-icon"></div>
+            </div>
+            <div class="play-label">ভিডিও দেখুন — Campus Walkthrough</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="testimonials">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">শিক্ষার্থীদের মতামত</div>
+          <h2 class="section-title">তারা <span>কী বলেন?</span></h2>
+          <p class="section-sub">আমাদের প্রাক্তন শিক্ষার্থীদের অভিজ্ঞতা</p>
+        </div>
+        <div class="testi-grid">
+          <div class="testi-card reveal">
+            <div class="testi-quote">"</div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testi-text">
+              এই কলেজে পড়ে আমি অনেক কিছু শিখেছি। শিক্ষকরা খুবই সহযোগী এবং
+              পরিবেশ অত্যন্ত বন্ধুত্বপূর্ণ।
+            </p>
+            <div class="testi-author">
+              <div class="testi-avatar">রহ</div>
+              <div>
+                <div class="testi-name">রহিম উদ্দিন</div>
+                <div class="testi-class">HSC 2023 — বিজ্ঞান বিভাগ</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card reveal">
+            <div class="testi-quote">"</div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testi-text">
+              কলেজের পরিবেশ ও শিক্ষার মান আমাকে বিশ্ববিদ্যালয়ে ভর্তির জন্য
+              প্রস্তুত করেছে।
+            </p>
+            <div class="testi-author">
+              <div
+                class="testi-avatar"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--secondary),
+                    var(--secondary-light)
+                  );
+                "
+              >
+                না
+              </div>
+              <div>
+                <div class="testi-name">নাফিসা আক্তার</div>
+                <div class="testi-class">HSC 2022 — মানবিক বিভাগ</div>
+              </div>
+            </div>
+          </div>
+          <div class="testi-card reveal">
+            <div class="testi-quote">"</div>
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testi-text">
+              ব্যবসায় শিক্ষা বিভাগে পড়ে আমি উদ্যোক্তা হওয়ার স্বপ্ন দেখছি।
+              কলেজ আমাকে অনুপ্রাণিত করেছে।
+            </p>
+            <div class="testi-author">
+              <div
+                class="testi-avatar"
+                style="
+                  background: linear-gradient(
+                    135deg,
+                    var(--accent2),
+                    var(--accent)
+                  );
+                "
+              >
+                কা
+              </div>
+              <div>
+                <div class="testi-name">কামরুল ইসলাম</div>
+                <div class="testi-class">HSC 2024 — ব্যবসায় শিক্ষা</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section id="faq">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">সাধারণ প্রশ্নাবলি</div>
+          <h2 class="section-title">প্রায়ই জিজ্ঞাসিত <span>প্রশ্ন</span></h2>
+        </div>
+        <div class="faq-list">
+          <div class="faq-item open reveal">
+            <div class="faq-q">
+              <div class="faq-q-text">ভর্তির জন্য কী কী কাগজপত্র লাগবে?</div>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-a">
+              <p>
+                SSC পাসের সনদপত্র, মার্কশিট, জন্ম নিবন্ধন সনদ, পাসপোর্ট সাইজ ছবি
+                (৪ কপি) এবং অভিভাবকের জাতীয় পরিচয়পত্রের ফটোকপি প্রয়োজন।
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <div class="faq-q">
+              <div class="faq-q-text">কলেজের ক্লাস কখন শুরু হয়?</div>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-a">
+              <p>
+                কলেজটি দিন শিফটে পরিচালিত হয়। সাধারণত সকাল ৯টা থেকে দুপুর ২টা
+                পর্যন্ত ক্লাস চলে।
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <div class="faq-q">
+              <div class="faq-q-text">EIIN নম্বর কত?</div>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-a">
+              <p>
+                যাদুর চর মডেল ডিগ্রি কলেজের EIIN নম্বর হলো 122582। এই নম্বরটি
+                বোর্ডের যেকোনো কাজে প্রয়োজন হয়।
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <div class="faq-q">
+              <div class="faq-q-text">কলেজটি কোন বোর্ডের অধীনে?</div>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-a">
+              <p>
+                যাদুর চর মডেল ডিগ্রি কলেজটি দিনাজপুর মাধ্যমিক ও উচ্চ মাধ্যমিক
+                শিক্ষা বোর্ডের অধীনে পরিচালিত হয়।
+              </p>
+            </div>
+          </div>
+          <div class="faq-item reveal">
+            <div class="faq-q">
+              <div class="faq-q-text">কলেজে কোন কোন বিভাগে পড়া যায়?</div>
+              <div class="faq-icon">+</div>
+            </div>
+            <div class="faq-a">
+              <p>
+                কলেজে বিজ্ঞান, ব্যবসায় শিক্ষা এবং মানবিক — এই তিনটি বিভাগে
+                পাঠদান করা হয়।
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-tag">যোগাযোগ</div>
+          <h2 class="section-title">আমাদের সাথে <span>যোগাযোগ</span> করুন</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-card reveal-left">
+            <h3>📬 যোগাযোগের তথ্য</h3>
+            <div class="contact-items">
+              <div class="contact-item">
+                <div class="ci-icon purple">📍</div>
+                <div>
+                  <div class="ci-label">ঠিকানা</div>
+                  <div class="ci-val">যাদুর চর, দিনাজপুর, বাংলাদেশ</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon pink">📞</div>
+                <div>
+                  <div class="ci-label">ফোন নম্বর</div>
+                  <div class="ci-val">+880-1XXX-XXXXXX</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon cyan">✉️</div>
+                <div>
+                  <div class="ci-label">ইমেইল</div>
+                  <div class="ci-val">info@jadurcharmdcollege.edu.bd</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon green">🆔</div>
+                <div>
+                  <div class="ci-label">EIIN নম্বর</div>
+                  <div class="ci-val">122582</div>
+                </div>
+              </div>
+              <div class="contact-item">
+                <div class="ci-icon purple">🕐</div>
+                <div>
+                  <div class="ci-label">অফিস সময়</div>
+                  <div class="ci-val">সকাল ৯টা — বিকাল ৪টা (রবি–বৃহস্পতি)</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="map-card reveal-right">
+            <div class="pin"></div>
+            <h3>📍 আমাদের অবস্থান</h3>
+            <p>
+              যাদুর চর মডেল ডিগ্রি কলেজ — দিনাজপুর জেলায় অবস্থিত। গুগল ম্যাপে
+              আমাদের খুঁজে নিন।
+            </p>
+            <a
+              href="https://www.google.com/maps/search/যাদুর+চর+দিনাজপুর"
+              target="_blank"
+              class="map-btn"
+            >
+              🗺️ Google Maps-এ দেখুন
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA ===== -->
+    <section id="cta" style="background: #fff">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <h2>Join Jadurchar Model Degree College Today</h2>
+          <p>আজই ভর্তি হন এবং আপনার উজ্জ্বল ভবিষ্যৎ গড়ে তুলুন 🚀</p>
+          <div class="cta-btns">
+            <a href="#contact" class="btn-white">📋 ভর্তি তথ্য জানুন</a>
+            <a
+              href="#contact"
+              class="btn btn-outline"
+              style="border-color: rgba(255, 255, 255, 0.5)"
+              >📞 এখনই যোগাযোগ করুন</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="logo-text">
+              যাদুর চর মডেল ডিগ্রি কলেজ
+              <span>Jadurchar Model Degree College</span>
+            </div>
+            <p>
+              মানসম্পন্ন শিক্ষা ও উজ্জ্বল ভবিষ্যতের প্রতিশ্রুতি নিয়ে ১৯৯৯ সাল
+              থেকে আমরা পথ চলছি।
+            </p>
+            <div class="social-links">
+              <a href="#" class="social-link" title="Facebook">fb</a>
+              <a href="#" class="social-link" title="YouTube">yt</a>
+              <a href="#" class="social-link" title="Twitter">tw</a>
+              <a href="#" class="social-link" title="Instagram">ig</a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>দ্রুত লিংক</h4>
+            <ul>
+              <li><a href="#hero">প্রচ্ছদ</a></li>
+              <li><a href="#about">আমাদের সম্পর্কে</a></li>
+              <li><a href="#departments">বিভাগসমূহ</a></li>
+              <li><a href="#notice">নোটিশ বোর্ড</a></li>
+              <li><a href="#contact">যোগাযোগ</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>একাডেমিক</h4>
+            <ul>
+              <li><a href="#">বিজ্ঞান বিভাগ</a></li>
+              <li><a href="#">ব্যবসায় শিক্ষা</a></li>
+              <li><a href="#">মানবিক বিভাগ</a></li>
+              <li><a href="#">পরীক্ষার রুটিন</a></li>
+              <li><a href="#">ফলাফল</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>তথ্য</h4>
+            <ul>
+              <li><a href="#">ভর্তি নির্দেশিকা</a></li>
+              <li><a href="#">বৃত্তি তথ্য</a></li>
+              <li><a href="#">লাইব্রেরি</a></li>
+              <li><a href="#">ক্যাম্পাস ম্যাপ</a></li>
+              <li><a href="#">গোপনীয়তা নীতি</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>
+            © ২০২৫ <span>যাদুর চর মডেল ডিগ্রি কলেজ</span>। সর্বস্বত্ব সংরক্ষিত।
+          </p>
+          <p>EIIN: 122582 | দিনাজপুর বোর্ড</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // ===== NAVBAR SCROLL =====
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        navbar.classList.toggle("scrolled", window.scrollY > 30);
+      });
+
+      // ===== HAMBURGER =====
+      const hamburger = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("open");
+      });
+      mobileMenu.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          mobileMenu.classList.remove("open");
+        });
+      });
+
+      // ===== SCROLL REVEAL =====
+      const revealEls = document.querySelectorAll(
+        ".reveal, .reveal-left, .reveal-right",
+      );
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry, i) => {
+            if (entry.isIntersecting) {
+              setTimeout(() => {
+                entry.target.classList.add("revealed");
+              }, entry.target.dataset.delay || 0);
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+
+      revealEls.forEach((el, i) => {
+        el.dataset.delay = (i % 4) * 80;
+        revealObserver.observe(el);
+      });
+
+      // ===== FAQ ACCORDION =====
+      document.querySelectorAll(".faq-q").forEach((q) => {
+        q.addEventListener("click", () => {
+          const item = q.parentElement;
+          const isOpen = item.classList.contains("open");
+          document
+            .querySelectorAll(".faq-item")
+            .forEach((i) => i.classList.remove("open"));
+          if (!isOpen) item.classList.add("open");
+        });
+      });
+
+      // ===== BUTTON RIPPLE =====
+      document
+        .querySelectorAll(".btn, .btn-primary, .btn-white, .map-btn")
+        .forEach((btn) => {
+          btn.addEventListener("click", function (e) {
+            const ripple = document.createElement("span");
+            ripple.classList.add("ripple");
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            ripple.style.cssText = `
+      width:${size}px;height:${size}px;
+      left:${e.clientX - rect.left - size / 2}px;
+      top:${e.clientY - rect.top - size / 2}px;
+    `;
+            this.appendChild(ripple);
+            setTimeout(() => ripple.remove(), 600);
+          });
+        });
+
+      // ===== STAGGER CHILD REVEALS =====
+      document
+        .querySelectorAll(
+          ".info-grid, .dept-grid, .features-grid, .notice-grid, .subjects-grid, .testi-grid",
+        )
+        .forEach((grid) => {
+          grid.querySelectorAll(":scope > *").forEach((child, i) => {
+            child.style.transitionDelay = `${i * 80}ms`;
+          });
+        });
+    </script>
+  </body>
+</html>

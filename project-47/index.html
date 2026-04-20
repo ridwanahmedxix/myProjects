@@ -3,42 +3,46 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PROJECT - 47</title>
-    <!-- CSS LINK   -->
+    <title>Shopify Navbar</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- FONTAWESOME LINK  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
   </head>
   <body>
-    <nav id="nav">
-      <div id="Shopify">Shopify</div>
-      <div>
-        <div class="inSearchp">
-          <div class="inSear">
-            <input placeholder="apple" type="text" />
-          </div>
-          <div class="blueBox">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </div>
-        </div>
+    <nav class="navbar">
+      <div class="logo">Shopify</div>
+
+      <!-- Search bar -->
+      <div class="search-bar">
+        <input type="text" placeholder="apple.." />
+        <button><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
-      <div class="pcincon">
-        <h3>Products</h3>
-        <h3>Categories</h3>
-        <div class="inconp3">
+
+      <!-- Menu links + icons -->
+      <div class="nav-items">
+        <div class="menu-links">
+          <a href="#">Products</a>
+          <a href="#">Categories</a>
+        </div>
+        <div class="icons">
           <i class="fa-solid fa-user-tie"></i>
-          <i class="fa-solid fa-cart-shopping"></i>
+          <div class="cart">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span class="cart-count">0</span>
+          </div>
           <i class="fa-solid fa-moon"></i>
         </div>
       </div>
+
+      <!-- Hamburger menu for mobile -->
+      <div class="hamburger">
+        <i class="fa-solid fa-bars"></i>
+      </div>
     </nav>
 
-    <script src="about.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
