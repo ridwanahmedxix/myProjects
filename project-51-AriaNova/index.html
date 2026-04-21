@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aria Nova — Official Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div class="loader" id="loader"><div class="loader-ring"></div></div>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="#home" class="logo">Aria Nova</a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#music">Music</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#videos">Videos</a></li>
+          <li><a href="#tour">Tour</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-bg"></div>
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="hero-content">
+        <span class="hero-sub">✨ New Album Out Now</span>
+        <h1>Aria Nova</h1>
+        <p>
+          A voice that paints the stars — weaving dreams into melodies, igniting
+          souls with every note.
+        </p>
+        <div class="cta-group">
+          <a href="#music" class="btn btn-primary">🎵 Listen Now</a>
+          <a href="#tour" class="btn btn-outline">View Tour</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>About</span>
+          <h2>The Artist</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-img reveal">
+            <img src="./img/p-2.jpg" alt="Aria Nova" loading="lazy" />
+          </div>
+          <div class="about-text reveal">
+            <h3>A Rising Star in Modern Music</h3>
+            <p>
+              Aria Nova is a genre-defying singer-songwriter blending ethereal
+              pop with electronic soundscapes. Her music is a journey through
+              vibrant emotion — raw, luminous, and unapologetically bold.
+            </p>
+            <p>
+              From intimate acoustic beginnings to stadium-sized anthems, Aria's
+              voice has captured hearts across the globe, earning her millions
+              of fans and critical acclaim worldwide.
+            </p>
+            <div class="stats">
+              <div class="stat">
+                <h4>12M+</h4>
+                <p>Monthly Listeners</p>
+              </div>
+              <div class="stat">
+                <h4>50+</h4>
+                <p>World Shows</p>
+              </div>
+              <div class="stat">
+                <h4>4</h4>
+                <p>Studio Albums</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Music -->
+    <section id="music">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Music</span>
+          <h2>Latest Tracks</h2>
+        </div>
+        <div class="video-grid" id="musicGrid"></div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Gallery</span>
+          <h2>Moments Captured</h2>
+        </div>
+        <div class="gallery-grid" id="galleryGrid"></div>
+      </div>
+    </section>
+
+    <!-- Videos -->
+    <section id="videos">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Videos</span>
+          <h2>Live Performances</h2>
+        </div>
+        <div class="video-grid" id="videosGrid"></div>
+      </div>
+    </section>
+
+    <!-- Tour -->
+    <section id="tour">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Tour</span>
+          <h2>Upcoming Events</h2>
+        </div>
+        <div class="tour-list" id="tourList"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-title reveal">
+          <span>Contact</span>
+          <h2>Get in Touch</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-img reveal">
+            <img src="./img/p-9.jpg" alt="Contact Aria" loading="lazy" />
+          </div>
+          <form class="contact-form reveal" id="contactForm">
+            <div class="form-group">
+              <label>Your Name</label>
+              <input type="text" required placeholder="Jane Doe" />
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" required placeholder="jane@example.com" />
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea
+                required
+                placeholder="Tell Aria something..."
+              ></textarea>
+            </div>
+            <button type="submit" class="submit-btn">Send Message ✨</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">📷</a>
+          <a href="#" aria-label="Twitter">🐦</a>
+          <a href="#" aria-label="YouTube">▶️</a>
+          <a href="#" aria-label="Spotify">🎧</a>
+          <a href="#" aria-label="TikTok">🎵</a>
+        </div>
+        <p class="copyright">
+          © 2025 Aria Nova. All rights reserved. Crafted with 💜
+        </p>
+      </div>
+    </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+      ↑
+    </button>
+
+    <script src="/script.js"></script>
+  </body>
+</html>
