@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifeDrop - Premium Blood Finder Platform</title>
+
+    <!-- Google Fonts: Poppins & Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Page Loader -->
+    <div id="page-loader" class="loader-wrapper">
+      <div class="loader-pulse">
+        <i class="fa-solid fa-droplet drop-icon"></i>
+      </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Floating Emergency Widget -->
+    <button
+      class="floating-emergency-btn"
+      onclick="
+        document
+          .getElementById('emergency-section')
+          .scrollIntoView({ behavior: 'smooth' })
+      "
+    >
+      <i class="fa-solid fa-truck-medical"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar glass-effect" id="navbar">
+      <div class="nav-container">
+        <a href="#" class="brand-logo">
+          <i class="fa-solid fa-droplet blood-drop"></i>
+          <span>Life<span>Drop</span></span>
+        </a>
+
+        <div class="nav-links">
+          <a href="#hero" class="active">Home</a>
+          <a href="#search-section">Find Donors</a>
+          <a href="#register-section">Register</a>
+          <a href="#dashboard-section">Statistics</a>
+        </div>
+
+        <div class="nav-actions">
+          <button
+            class="btn btn-outline"
+            onclick="window.location.href = '#register-section'"
+          >
+            Login / Join
+          </button>
+          <button
+            class="btn btn-primary pulse-btn"
+            onclick="window.location.href = '#emergency-section'"
+          >
+            <i class="fa-solid fa-heart-pulse"></i> Emergency
+          </button>
+          <button class="mobile-menu-btn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <header id="hero" class="hero-section">
+        <div class="hero-background">
+          <div class="blob blob-1"></div>
+          <div class="blob blob-2"></div>
+        </div>
+        <div class="hero-content">
+          <div class="hero-text reveal-up">
+            <span class="badge badge-red mb-4">Save a Life Today</span>
+            <h1 class="hero-title">
+              Give the Gift of <span class="text-gradient">Life</span>. Find
+              Blood Instantly.
+            </h1>
+            <p class="hero-subtitle">
+              The fastest, most reliable platform to connect blood donors with
+              those in critical need. Smart searching, instant connections, zero
+              delays.
+            </p>
+            <div class="hero-buttons">
+              <button
+                class="btn btn-primary btn-large"
+                onclick="
+                  document
+                    .getElementById('search-section')
+                    .scrollIntoView({ behavior: 'smooth' })
+                "
+              >
+                Find Blood Now
+              </button>
+              <button
+                class="btn btn-secondary btn-large"
+                onclick="
+                  document
+                    .getElementById('register-section')
+                    .scrollIntoView({ behavior: 'smooth' })
+                "
+              >
+                Become a Donor
+              </button>
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <span class="stat-number counter" data-target="2450">0</span>
+                <span class="stat-label">Registered Donors</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <span class="stat-number counter" data-target="1284">0</span>
+                <span class="stat-label">Lives Saved</span>
+              </div>
+              <div class="stat-divider"></div>
+              <div class="stat-item">
+                <div class="live-indicator"><span class="dot"></span> Live</div>
+                <span class="stat-label">System Online</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual reveal-fade">
+            <div class="hero-card-stack">
+              <div class="glass-card floating-card-1">
+                <div class="card-icon">
+                  <i class="fa-solid fa-location-crosshairs"></i>
+                </div>
+                <div>
+                  <h4>Smart Location</h4>
+                  <p>Find donors near your hospital</p>
+                </div>
+              </div>
+              <div class="glass-card floating-card-2">
+                <div class="card-icon blood-icon">
+                  <i class="fa-solid fa-droplet"></i>
+                </div>
+                <div>
+                  <h4>Instant Match</h4>
+                  <p>Real-time availability status</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Emergency Requests Marquee / Section -->
+      <section id="emergency-section" class="emergency-section py-large">
+        <div class="section-header reveal-up">
+          <h2>
+            <i class="fa-solid fa-truck-medical text-red"></i> Urgent Requests
+          </h2>
+          <p>Critical blood needs in your region. Act fast.</p>
+        </div>
+        <div class="emergency-grid" id="emergency-grid">
+          <!-- Populated by JS -->
+        </div>
+        <button
+          class="btn btn-outline mt-4 btn-center"
+          onclick="uiController.openModal('emergencyModal')"
+        >
+          Create Emergency Request
+        </button>
+      </section>
+
+      <!-- Blood Groups Overview -->
+      <section class="blood-groups py-large bg-soft">
+        <div class="section-header reveal-up">
+          <h2>Live Availability</h2>
+          <p>Current donor count by blood group.</p>
+        </div>
+        <div class="blood-group-grid" id="blood-group-grid">
+          <!-- Populated by JS -->
+        </div>
+      </section>
+
+      <!-- Advanced Search Section -->
+      <section id="search-section" class="search-section py-large">
+        <div class="section-header reveal-up">
+          <h2>Find a Donor</h2>
+          <p>Use our real-time matching system to find eligible donors.</p>
+        </div>
+
+        <div class="search-container glass-card reveal-up">
+          <div class="search-filters">
+            <div class="input-group">
+              <label>Blood Group</label>
+              <select id="filter-group">
+                <option value="All">All Groups</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Location / City</label>
+              <input
+                type="text"
+                id="filter-location"
+                placeholder="e.g. New York, Dhaka..."
+              />
+            </div>
+            <div class="input-group">
+              <label>Availability</label>
+              <select id="filter-availability">
+                <option value="All">All Status</option>
+                <option value="Available">Available Now</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="results-header mt-4">
+          <h3 id="results-count">Showing 0 Donors</h3>
+          <div class="view-toggles">
+            <button class="active">
+              <i class="fa-solid fa-border-all"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="donor-grid" id="donor-grid">
+          <!-- Populated by JS -->
+        </div>
+
+        <div id="no-results" class="no-results hidden">
+          <i class="fa-solid fa-magnifying-glass-minus"></i>
+          <h3>No donors found matching your criteria.</h3>
+          <p>Try adjusting your filters or expanding your location.</p>
+        </div>
+      </section>
+
+      <!-- Dashboard / Statistics -->
+      <section
+        id="dashboard-section"
+        class="dashboard-section py-large bg-soft"
+      >
+        <div class="section-header reveal-up">
+          <h2>Platform Analytics</h2>
+          <p>Real-time data from our database.</p>
+        </div>
+        <div class="dashboard-grid">
+          <div class="dash-card glass-card reveal-up">
+            <i class="fa-solid fa-users dash-icon"></i>
+            <h3 class="counter" data-target="2450">0</h3>
+            <p>Total Registered</p>
+          </div>
+          <div
+            class="dash-card glass-card reveal-up"
+            style="transition-delay: 0.1s"
+          >
+            <i class="fa-solid fa-truck-fast dash-icon"></i>
+            <h3 class="counter" data-target="156">0</h3>
+            <p>Emergencies Solved</p>
+          </div>
+          <div
+            class="dash-card glass-card reveal-up"
+            style="transition-delay: 0.2s"
+          >
+            <i class="fa-solid fa-hospital dash-icon"></i>
+            <h3 class="counter" data-target="89">0</h3>
+            <p>Partner Hospitals</p>
+          </div>
+          <div
+            class="dash-card glass-card reveal-up"
+            style="transition-delay: 0.3s"
+          >
+            <i class="fa-solid fa-clock dash-icon"></i>
+            <h3 class="counter" data-target="14">0</h3>
+            <p>Avg. Match Time (mins)</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Registration Section -->
+      <section id="register-section" class="register-section py-large">
+        <div class="registration-container glass-card reveal-up">
+          <div class="reg-info">
+            <h2>Join the Lifesavers.</h2>
+            <p>
+              Registering takes less than 2 minutes. Your single donation can
+              save up to 3 lives.
+            </p>
+            <ul class="benefit-list">
+              <li>
+                <i class="fa-solid fa-circle-check"></i> Instant notifications
+                for local emergencies
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> Track your donation
+                history
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-check"></i> Digital Donor ID Card
+              </li>
+            </ul>
+            <div class="medical-illustration">
+              <i class="fa-solid fa-hand-holding-droplet"></i>
+            </div>
+          </div>
+          <div class="reg-form-wrapper">
+            <form id="donor-form" class="modern-form">
+              <h3>Donor Registration</h3>
+              <div class="form-grid">
+                <div class="input-group">
+                  <label>Full Name *</label>
+                  <input
+                    type="text"
+                    id="reg-name"
+                    required
+                    placeholder="John Doe"
+                  />
+                </div>
+                <div class="input-group">
+                  <label>Blood Group *</label>
+                  <select id="reg-group" required>
+                    <option value="" disabled selected>Select...</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label>Phone Number *</label>
+                  <input
+                    type="tel"
+                    id="reg-phone"
+                    required
+                    placeholder="+1 234 567 8900"
+                  />
+                </div>
+                <div class="input-group">
+                  <label>City / Region *</label>
+                  <input
+                    type="text"
+                    id="reg-city"
+                    required
+                    placeholder="New York"
+                  />
+                </div>
+                <div class="input-group full-width">
+                  <label>Last Donation Date</label>
+                  <input type="date" id="reg-date" />
+                  <small class="hint">Leave blank if never donated.</small>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block mt-4">
+                Register as Donor <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="modern-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="#" class="brand-logo text-white">
+            <i class="fa-solid fa-droplet"></i>
+            <span>Life<span>Drop</span></span>
+          </a>
+          <p>
+            Empowering communities to save lives through smart, real-time blood
+            donor connections.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#hero">Home</a>
+          <a href="#search-section">Find Donors</a>
+          <a href="#register-section">Register</a>
+          <a href="#dashboard-section">Analytics</a>
+        </div>
+        <div class="footer-links">
+          <h4>Support</h4>
+          <a href="#">Contact Us</a>
+          <a href="#">FAQ</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+        <div class="footer-newsletter">
+          <h4>Stay Updated</h4>
+          <p>Get alerts about critical shortages in your area.</p>
+          <div class="newsletter-input">
+            <input type="email" placeholder="Enter email address" />
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 LifeDrop Platform. All rights reserved.</p>
+        <button
+          class="back-to-top"
+          onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+        >
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Modals -->
+    <div id="emergencyModal" class="modal-overlay">
+      <div class="modal-content glass-card">
+        <button
+          class="close-modal"
+          onclick="uiController.closeModal('emergencyModal')"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="modal-header">
+          <h3>
+            <i class="fa-solid fa-truck-medical text-red"></i> Create Emergency
+            Request
+          </h3>
+        </div>
+        <form id="emergency-form" class="modern-form mt-4">
+          <div class="input-group mb-3">
+            <label>Hospital Name *</label>
+            <input
+              type="text"
+              id="em-hospital"
+              required
+              placeholder="General Hospital"
+            />
+          </div>
+          <div class="form-grid">
+            <div class="input-group">
+              <label>Required Blood Group *</label>
+              <select id="em-group" required>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Urgency Level *</label>
+              <select id="em-urgency" required>
+                <option value="Critical">Critical (Within 2 Hours)</option>
+                <option value="High">High (Today)</option>
+                <option value="Medium">Medium (Within 24 Hours)</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label>Contact Number *</label>
+              <input
+                type="tel"
+                id="em-phone"
+                required
+                placeholder="Phone number"
+              />
+            </div>
+            <div class="input-group">
+              <label>City/Area *</label>
+              <input
+                type="text"
+                id="em-city"
+                required
+                placeholder="City name"
+              />
+            </div>
+          </div>
+          <button
+            type="submit"
+            class="btn btn-primary btn-block mt-4 pulse-btn"
+          >
+            Broadcast Emergency
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+  </body>
+</html>
