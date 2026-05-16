@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Fire Gun Rating Platform | AAA Quality</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <span class="logo-icon">🔫</span>
+          <span class="logo-text">FF WEAPONS</span>
+        </div>
+        <div class="nav-search">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search weapons..."
+            class="search-box"
+          />
+          <span class="search-icon">🔍</span>
+        </div>
+        <div class="nav-stats">
+          <div class="stat-item">
+            <span class="stat-label">Total Guns</span>
+            <span class="stat-value" id="totalGuns">20</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">Rated</span>
+            <span class="stat-value" id="ratedGuns">0</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-background">
+        <div class="hero-glow-1"></div>
+        <div class="hero-glow-2"></div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title">ARSENAL EVALUATION SYSTEM</h1>
+        <p class="hero-subtitle">
+          Rate, Review & Rank Your Favorite Free Fire Weapons
+        </p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="scrollToGuns()">
+            Explore Weapons
+          </button>
+          <button class="btn btn-secondary" onclick="scrollToLeaderboard()">
+            View Leaderboard
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filters-section">
+      <div class="container">
+        <h2 class="section-title">Filter & Sort</h2>
+        <div class="filters-grid">
+          <div class="filter-group">
+            <label>Category:</label>
+            <div class="filter-buttons">
+              <button
+                class="filter-btn active"
+                onclick="filterByCategory('all')"
+              >
+                All
+              </button>
+              <button class="filter-btn" onclick="filterByCategory('AR')">
+                Assault Rifles
+              </button>
+              <button class="filter-btn" onclick="filterByCategory('SMG')">
+                SMG
+              </button>
+              <button class="filter-btn" onclick="filterByCategory('Sniper')">
+                Sniper
+              </button>
+              <button class="filter-btn" onclick="filterByCategory('Shotgun')">
+                Shotgun
+              </button>
+              <button class="filter-btn" onclick="filterByCategory('LMG')">
+                LMG
+              </button>
+              <button class="filter-btn" onclick="filterByCategory('Pistol')">
+                Pistol
+              </button>
+            </div>
+          </div>
+          <div class="filter-group">
+            <label>Sort By:</label>
+            <div class="filter-buttons">
+              <button class="filter-btn active" onclick="sortGuns('default')">
+                Default
+              </button>
+              <button class="filter-btn" onclick="sortGuns('rating')">
+                Top Rated
+              </button>
+              <button class="filter-btn" onclick="sortGuns('votes')">
+                Most Voted
+              </button>
+              <button class="filter-btn" onclick="sortGuns('damage')">
+                Highest Damage
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guns Grid Section -->
+    <section class="guns-section" id="gunsSection">
+      <div class="container">
+        <h2 class="section-title">Weapons Arsenal</h2>
+        <div class="guns-grid" id="gunsGrid">
+          <!-- Guns will be populated by JavaScript -->
+        </div>
+        <div class="no-results" id="noResults" style="display: none">
+          <p>No weapons found matching your criteria</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leaderboard Section -->
+    <section class="leaderboard-section" id="leaderboardSection">
+      <div class="container">
+        <h2 class="section-title">Top Ranked Weapons</h2>
+        <div class="leaderboard-container">
+          <div class="leaderboard-top3">
+            <div class="podium">
+              <div class="podium-item podium-2nd" id="podium-2">
+                <div class="podium-rank">2</div>
+                <div class="podium-content">
+                  <img src="" alt="" class="podium-image" />
+                  <p class="podium-name"></p>
+                  <p class="podium-rating"></p>
+                </div>
+              </div>
+              <div class="podium-item podium-1st" id="podium-1">
+                <div class="crown">👑</div>
+                <div class="podium-rank">1</div>
+                <div class="podium-content">
+                  <img src="" alt="" class="podium-image" />
+                  <p class="podium-name"></p>
+                  <p class="podium-rating"></p>
+                </div>
+              </div>
+              <div class="podium-item podium-3rd" id="podium-3">
+                <div class="podium-rank">3</div>
+                <div class="podium-content">
+                  <img src="" alt="" class="podium-image" />
+                  <p class="podium-name"></p>
+                  <p class="podium-rating"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="leaderboard-full" id="leaderboardFull">
+            <!-- Full leaderboard will be populated by JavaScript -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gun Details Modal -->
+    <div class="modal" id="gunModal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        <div class="modal-body">
+          <div class="modal-image-section">
+            <img src="" alt="" id="modalGunImage" class="modal-gun-image" />
+            <div class="modal-specs">
+              <h3 id="modalGunName"></h3>
+              <p id="modalGunCategory"></p>
+            </div>
+          </div>
+
+          <div class="modal-stats">
+            <h4>Weapon Stats</h4>
+            <div class="stats-grid">
+              <div class="stat-bar">
+                <label>Damage</label>
+                <div class="progress-bar">
+                  <div class="progress" id="statDamage"></div>
+                </div>
+                <span id="statDamageValue">0</span>
+              </div>
+              <div class="stat-bar">
+                <label>Range</label>
+                <div class="progress-bar">
+                  <div class="progress" id="statRange"></div>
+                </div>
+                <span id="statRangeValue">0</span>
+              </div>
+              <div class="stat-bar">
+                <label>Accuracy</label>
+                <div class="progress-bar">
+                  <div class="progress" id="statAccuracy"></div>
+                </div>
+                <span id="statAccuracyValue">0</span>
+              </div>
+              <div class="stat-bar">
+                <label>Mobility</label>
+                <div class="progress-bar">
+                  <div class="progress" id="statMobility"></div>
+                </div>
+                <span id="statMobilityValue">0</span>
+              </div>
+              <div class="stat-bar">
+                <label>Fire Rate</label>
+                <div class="progress-bar">
+                  <div class="progress" id="statFireRate"></div>
+                </div>
+                <span id="statFireRateValue">0</span>
+              </div>
+              <div class="stat-bar">
+                <label>Magazine</label>
+                <div class="progress-bar">
+                  <div class="progress" id="statMagazine"></div>
+                </div>
+                <span id="statMagazineValue">0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-rating">
+            <h4>Rate This Weapon</h4>
+            <div class="rating-display">
+              <div class="average-rating">
+                <div class="rating-number" id="avgRating">0</div>
+                <div class="rating-stars" id="displayStars"></div>
+                <p id="ratingStats">0 votes</p>
+              </div>
+              <div class="interactive-rating">
+                <p>Your Rating:</p>
+                <div class="stars" id="interactiveStars">
+                  <span class="star" onclick="setRating(1)" data-value="1"
+                    >★</span
+                  >
+                  <span class="star" onclick="setRating(2)" data-value="2"
+                    >★</span
+                  >
+                  <span class="star" onclick="setRating(3)" data-value="3"
+                    >★</span
+                  >
+                  <span class="star" onclick="setRating(4)" data-value="4"
+                    >★</span
+                  >
+                  <span class="star" onclick="setRating(5)" data-value="5"
+                    >★</span
+                  >
+                </div>
+                <p id="ratingFeedback" class="rating-feedback"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-comments">
+            <h4>Community Reviews</h4>
+            <div class="comment-form">
+              <input
+                type="text"
+                id="commentUsername"
+                placeholder="Your name"
+                maxlength="30"
+              />
+              <textarea
+                id="commentText"
+                placeholder="Share your thoughts about this weapon..."
+                maxlength="200"
+              ></textarea>
+              <button class="btn btn-small" onclick="addComment()">
+                Post Review
+              </button>
+            </div>
+            <div class="comments-list" id="commentsList">
+              <!-- Comments will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>
+          &copy; 2024 Free Fire Gun Rating Platform | Built with ❤️ for Gamers
+        </p>
+        <p class="footer-info">Rate responsibly | All data stored locally</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
