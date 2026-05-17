@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aero | Premium Weather</title>
+    <!-- Boxicons for Modern Premium Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts: Plus Jakarta Sans for premium typography -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-default">
+    <!-- Dynamic Animated Background Layer -->
+    <div class="bg-overlay"></div>
+
+    <div class="app-container">
+      <!-- Navigation & Search Bar -->
+      <header class="glass-panel navbar fade-in">
+        <div class="logo">
+          <i class="bx bx-wind"></i>
+          <span>Aero</span>
+        </div>
+
+        <div class="search-container">
+          <div class="search-bar">
+            <i class="bx bx-search search-icon"></i>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search city, country..."
+              autocomplete="off"
+              aria-label="Search city"
+            />
+            <button
+              id="location-btn"
+              class="icon-btn tooltip"
+              data-tooltip="Current Location"
+            >
+              <i class="bx bx-target-lock"></i>
+            </button>
+          </div>
+          <!-- Search Results & Recents Dropdown -->
+          <div class="search-dropdown glass-panel hidden" id="search-dropdown">
+            <div class="dropdown-section" id="favorites-section">
+              <h4>Saved Locations</h4>
+              <ul id="favorites-list" class="location-list"></ul>
+            </div>
+            <div class="dropdown-section" id="recent-section">
+              <h4>Recent Searches</h4>
+              <ul id="recent-list" class="location-list"></ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="unit-toggle" class="glass-btn">
+            <span class="unit-c active">°C</span> |
+            <span class="unit-f">°F</span>
+          </button>
+          <button
+            id="theme-toggle"
+            class="icon-btn tooltip"
+            data-tooltip="Toggle Theme"
+          >
+            <i class="bx bx-moon"></i>
+          </button>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <!-- Left Column: Current Weather -->
+        <section class="current-weather-section fade-in delay-1">
+          <div class="glass-panel current-weather-card">
+            <div class="card-header">
+              <div class="location-info">
+                <h1 id="city-name" class="skeleton-text">City Name</h1>
+                <p id="date-time" class="skeleton-text sm">Monday, 12:00 PM</p>
+              </div>
+              <button
+                id="favorite-btn"
+                class="icon-btn tooltip"
+                data-tooltip="Save Location"
+              >
+                <i class="bx bx-heart"></i>
+              </button>
+            </div>
+
+            <div class="weather-main">
+              <div class="temp-container">
+                <span id="current-temp" class="skeleton-text lg">--</span>
+                <span class="temp-unit">°</span>
+              </div>
+              <div class="weather-icon-container skeleton-box">
+                <i id="current-icon" class="bx bx-cloud"></i>
+              </div>
+            </div>
+
+            <div class="weather-desc">
+              <h2 id="weather-condition" class="skeleton-text">Condition</h2>
+              <p id="feels-like" class="skeleton-text sm">Feels like --°</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Right Column: Highlights & Hourly -->
+        <section class="highlights-section fade-in delay-2">
+          <div class="glass-panel highlights-card">
+            <h3 class="section-title">Today's Highlights</h3>
+            <div class="highlights-grid">
+              <!-- Humidity -->
+              <div class="highlight-item">
+                <div class="hi-header">
+                  <span class="hi-title">Humidity</span>
+                  <i class="bx bx-water"></i>
+                </div>
+                <div class="hi-value skeleton-text" id="humidity">--%</div>
+              </div>
+              <!-- Wind Speed -->
+              <div class="highlight-item">
+                <div class="hi-header">
+                  <span class="hi-title">Wind</span>
+                  <i class="bx bx-wind"></i>
+                </div>
+                <div class="hi-value skeleton-text" id="wind-speed">
+                  -- km/h
+                </div>
+              </div>
+              <!-- Pressure -->
+              <div class="highlight-item">
+                <div class="hi-header">
+                  <span class="hi-title">Pressure</span>
+                  <i class="bx bx-tachometer"></i>
+                </div>
+                <div class="hi-value skeleton-text" id="pressure">-- hPa</div>
+              </div>
+              <!-- Visibility -->
+              <div class="highlight-item">
+                <div class="hi-header">
+                  <span class="hi-title">Visibility</span>
+                  <i class="bx bx-show"></i>
+                </div>
+                <div class="hi-value skeleton-text" id="visibility">-- km</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hourly Forecast -->
+          <div class="glass-panel hourly-card fade-in delay-3">
+            <h3 class="section-title">Hourly Forecast</h3>
+            <div class="hourly-container" id="hourly-forecast">
+              <!-- JS injected hourly items go here -->
+              <div class="hourly-item skeleton-box"></div>
+              <div class="hourly-item skeleton-box"></div>
+              <div class="hourly-item skeleton-box"></div>
+              <div class="hourly-item skeleton-box"></div>
+              <div class="hourly-item skeleton-box"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Bottom Full Width: 5-Day Forecast -->
+        <section class="daily-section fade-in delay-4">
+          <div class="glass-panel daily-card">
+            <h3 class="section-title">5-Day Forecast</h3>
+            <div class="daily-grid" id="daily-forecast">
+              <!-- JS injected daily items go here -->
+              <div class="daily-item skeleton-box"></div>
+              <div class="daily-item skeleton-box"></div>
+              <div class="daily-item skeleton-box"></div>
+              <div class="daily-item skeleton-box"></div>
+              <div class="daily-item skeleton-box"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Error Toast -->
+    <div id="error-toast" class="glass-panel toast hidden">
+      <i class="bx bx-error-circle"></i>
+      <span id="error-message">An error occurred.</span>
+      <button id="close-toast"><i class="bx bx-x"></i></button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
