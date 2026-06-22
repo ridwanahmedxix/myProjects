@@ -42,3 +42,23 @@ nav ul li a {
 nav ul li a:hover {
   background-color: aqua;
 }
+
+.sidebar {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.372);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.sidebar li {
+  width: 100%;
+}
+.sidebar a {
+  width: 100%;
+}
