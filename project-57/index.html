@@ -8,14 +8,36 @@
   </head>
   <body>
     <nav>
-      <ul>
-        <li>
-          <a href="#"> <img src="./img/close.png" alt="" /> </a>
+      <ul class="sideBar">
+        <li onclick="closeBar()">
+          <a href="#">
+            <img
+              style="background-color: black; width: 30px"
+              src="./img/close.png"
+              alt=""
+            />
+          </a>
         </li>
         <li><a href="#">Home</a></li>
         <li><a href="#">Services</a></li>
         <li><a href="#">Product</a></li>
         <li><a href="#">Contact</a></li>
+      </ul>
+
+      <ul>
+        <li><a href="#">Ridwan</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Contact</a></li>
+        <li onclick="openBar()">
+          <a href="#">
+            <img
+              style="background-color: black; width: 30px"
+              src="./img/menu.png"
+              alt=""
+            />
+          </a>
+        </li>
       </ul>
     </nav>
     <script src="script.js"></script>
