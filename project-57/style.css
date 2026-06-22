@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+nav {
+  background-color: rgb(220, 214, 214);
+}
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+nav li {
+  list-style: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+nav li:first-child {
+  margin-right: auto;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+  font: 20px;
+  height: 100%;
+  transition: 0.4s;
+}
+nav ul li a:hover {
+  background-color: aqua;
+}
