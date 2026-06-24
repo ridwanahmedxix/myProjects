@@ -10,3 +10,8 @@ td {
   border: 1px solid black;
   border-collapse: collapse;
 }
+table {
+  text-align: center;
+  width: 900px;
+  height: 400px;
+}
