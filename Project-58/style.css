@@ -16,4 +16,13 @@ table {
   margin: 100px auto;
   width: 900px;
   height: 400px;
+  border-bottom: 4px solid green;
+}
+.thHead {
+  background-color: green;
+  color: white;
+}
+.tableRow2 {
+  background-color: burlywood;
+  color: blue;
 }
