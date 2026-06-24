@@ -12,6 +12,8 @@ td {
 }
 table {
   text-align: center;
+  font-size: 25px;
+  margin: 100px auto;
   width: 900px;
   height: 400px;
 }
