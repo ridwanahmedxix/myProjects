@@ -7,7 +7,7 @@ table {
   width: 1000px;
   height: 400px;
   text-align: center;
-  margin: 70px auto;
+  margin: 70px auto 0px auto;
   font-size: 22px;
 }
 
@@ -16,4 +16,12 @@ th,
 td {
   border: 1px solid black;
   border-collapse: collapse;
+}
+.thHead {
+  background-color: rgb(2, 135, 2);
+  color: white;
+}
+.marryParent {
+  background-color: beige;
+  color: blue;
 }
